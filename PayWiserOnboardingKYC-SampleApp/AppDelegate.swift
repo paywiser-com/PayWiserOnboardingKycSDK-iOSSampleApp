@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PayWiserOnboardingKYC-SampleApp
 //
-//  Created by tjasa on 29/07/2020.
+//  Created by tjasa on 6/24/20.
 //  Copyright © 2020 Intech. All rights reserved.
 //
 
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        registerDefaultsFromSettingsBundle()
         return true
     }
 
@@ -33,5 +34,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    
+    func registerDefaultsFromSettingsBundle() {
+        let settingsName                    = "Settings"
+        let settingsExtension               = "bundle"
+        let settingsRootPlist               = "Root.plist"
+        let settingsPreferencesItems        = "PreferenceSpecifiers"
+        let settingsPreferenceKey           = "Key"
+        let settingsPreferenceDefaultValue  = "DefaultValue"
+
+        guard let settingsBundleURL = Bundle.main.url(forResource: settingsName, withExtension: settingsExtension),
+            let settingsData = try? Data(contentsOf: settingsBundleURL.appendingPathComponent(settingsRootPlist)),
+            let settingsPlist = try? PropertyListSerialization.propertyList(
+                from: settingsData,
+                options: [],
+                format: nil) as? [String: Any],
+            let settingsPreferences = settingsPlist[settingsPreferencesItems] as? [[String: Any]] else {
+                return
+        }
+
+        var defaultsToRegister = [String: Any]()
+
+        settingsPreferences.forEach { preference in
+            if let key = preference[settingsPreferenceKey] as? String {
+                defaultsToRegister[key] = preference[settingsPreferenceDefaultValue]
+            }
+        }
+
+        UserDefaults.standard.register(defaults: defaultsToRegister)
+    }
+    
 }
 

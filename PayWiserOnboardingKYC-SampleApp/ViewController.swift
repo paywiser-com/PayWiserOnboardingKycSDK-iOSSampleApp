@@ -2,19 +2,239 @@
 //  ViewController.swift
 //  PayWiserOnboardingKYC-SampleApp
 //
-//  Created by tjasa on 29/07/2020.
+//  Created by tjasa on 6/24/20.
 //  Copyright © 2020 Intech. All rights reserved.
 //
 
 import UIKit
+import AVFoundation
+import PayWiserOnboardingKYC
+import InAppSettingsKit
 
-class ViewController: UIViewController {
 
+private enum PermissionType : String {
+    case Camera
+    case Microphone
+}
+
+//var presentingVC : UIViewController!
+var showData = false
+
+
+class ViewController: UIViewController, IASKSettingsDelegate {
+    
+    
+    @IBOutlet weak var StartButton: UIButton!
+    @IBOutlet weak var GetDataButton: UIButton!
+    
+    var credentials : KycCredentials?
+    var settings : KycSettings?
+    var userData : KycUserData?
+    
+    var kycStyle : String = "default"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        UserDefaults.standard.addObserver(self, forKeyPath: "kycId", options: .new, context: nil)
+        UserDefaults.standard.addObserver(self, forKeyPath: "kyc_style_preference", options: .new, context: nil)
+        
+        GetDataButton.isEnabled = false
+        
+        getStyle()
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "kycId" {
+            if UserDefaults.standard.string(forKey: "kycId") != nil {
+                GetDataButton.isEnabled = true
+            }
+        }
+        if keyPath == "kyc_style_preference" {
+            getStyle()
+        }
+    }
+    
+    func getStyle() {
+        kycStyle = UserDefaults.standard.string(forKey: "kyc_style_preference") ?? ""
+        if kycStyle == "custom" {
+            AppStyle.setCustomStyle()
+        }
+        else {
+            AppStyle.setDefaultStyle()
+        }
+        self.loadView()
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return kycStyle == "custom" ? .lightContent : .default
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UserDefaults.standard.string(forKey: "kycId") != nil {
+            GetDataButton.isEnabled = true
+        }
+    }
+    
+    
+    @IBAction func openSettings(_ sender: Any) {
+        let appSettingsViewController = IASKAppSettingsViewController()
+        appSettingsViewController.neverShowPrivacySettings = true
+        appSettingsViewController.showCreditsFooter = false
+        appSettingsViewController.delegate = self
+        
+        let navController = UINavigationController(rootViewController: appSettingsViewController)
+        navController.modalPresentationStyle = .fullScreen
+        self.show(navController, sender: self)
+    }
+    
+    func settingsViewControllerDidEnd(_ settingsViewController: IASKAppSettingsViewController) {
+        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func startKyc(_ sender: UIButton) {
+        showLoading(vc: self)
+        checkCameraPermission()
+    }
+    
+    func goToKyc()
+    {
+        getKycSettings()
+        
+        DispatchQueue.main.async {
+            let cameraAuthorized = (AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == .authorized) ? true : false
+            let microphoneAuthorized = (AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .authorized) ? true : false
+            
+            if cameraAuthorized && microphoneAuthorized {
+                
+                let initStoryboard = UIStoryboard(name: "LoadingViewController", bundle: nil)
+                let initVC = initStoryboard.instantiateViewController(withIdentifier: "LoadingViewController")
+                
+                self.addChild(initVC)
+                self.view.addSubview(initVC.view)
+                initVC.didMove(toParent: self)
+                
+                //presentingVC = initVC
+                
+                self.hideLoading(vc: self)
+                
+                let config = KycConfig(credentials: self.credentials!, settings: self.settings!, userData: self.userData)
+                let result = VerificationResult()
+                
+                PayWiserOnboardingKyc.startKyc(vc: initVC, config: config, result: result)
+            }
+        }
+    }
+    
+    
+    @IBAction func onGetKycData(_ sender: Any) {
+        
+        showData = true
+        
+        let initStoryboard = UIStoryboard(name: "KycDataViewController", bundle: nil)
+        let initVC = initStoryboard.instantiateViewController(withIdentifier: "KycDataViewController")
+        
+        self.show(initVC, sender: nil)
+    }
+    
+    
+    func getKycSettings() {
+        
+        let sdkUsername = UserDefaults.standard.string(forKey: "sdk_api_username") ?? ""
+        let sdkPassword = UserDefaults.standard.string(forKey: "sdk_api_password") ?? ""
+        let sdkBaseUrl = UserDefaults.standard.string(forKey: "sdk_api_url") ?? ""
+        
+        credentials = KycCredentials(username: sdkUsername, password: sdkPassword, endpointUrl: sdkBaseUrl)
+        
+        let referenceId = UUID().uuidString
+        var videoMode : VideoModeType = .U
+        let attendedMode = UserDefaults.standard.bool(forKey: "attended_video_mode")
+        if attendedMode == true {
+            videoMode = VideoModeType.A
+        }
+        else {
+            videoMode = VideoModeType.U
+        }
+        let requestVerification = UserDefaults.standard.bool(forKey: "human_verification")
+        let language = UserDefaults.standard.string(forKey: "language_preference") ?? ""
+        
+        settings = KycSettings(referenceID: referenceId, videoMode: videoMode, requestVerification: requestVerification, language: language)
+        
+        let firstName = UserDefaults.standard.string(forKey: "data_first_name") ?? nil
+        let middleName = UserDefaults.standard.string(forKey: "data_middle_name") ?? nil
+        let lastName = UserDefaults.standard.string(forKey: "data_last_name") ?? nil
+        let address1 = UserDefaults.standard.string(forKey: "data_address1") ?? nil
+        let address2 = UserDefaults.standard.string(forKey: "data_address2") ?? nil
+        let zipCode = UserDefaults.standard.string(forKey: "data_zip_code") ?? nil
+        let city = UserDefaults.standard.string(forKey: "data_city") ?? nil
 
+        userData = KycUserData(firstName: firstName, middleName: middleName, lastName: lastName, address1: address1, address2: address2, zipCode: zipCode, city: city)
+        
+    }
+    
 
 }
 
+
+
+extension ViewController {
+    
+    private func checkCameraPermission() {
+        
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            checkMicrophonePermission()
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) -> Void in
+                if granted == true {
+                    self.checkMicrophonePermission()
+                }
+            })
+        case .denied:
+            showPhoneSettings(type: PermissionType.Camera.rawValue)
+        case .restricted: // The user can't grant access due to restrictions.
+            return   // ????
+        default:
+            fatalError(NSLocalizedString("Camera Authorization Status not handled!", comment: ""))
+        }
+    }
+    
+    private func checkMicrophonePermission() {
+        
+        switch AVAudioSession.sharedInstance().recordPermission {
+        case .granted:
+            goToKyc()
+        case .denied:
+            showPhoneSettings(type: PermissionType.Microphone.rawValue)
+        case .undetermined:
+            AVAudioSession.sharedInstance().requestRecordPermission({ (granted) in
+                if granted {
+                    self.goToKyc()
+                }
+            })
+        default:
+            fatalError(NSLocalizedString("Microphone Authorization Status not handled!", comment: ""))
+        }
+    }
+
+    private func showPhoneSettings(type: String) {
+        hideLoading(vc: self)
+        let alertController = UIAlertController(title: NSLocalizedString("Permission Error", comment: ""), message: NSLocalizedString("Permission for ", comment: "") + NSLocalizedString(type, comment: "") + NSLocalizedString(" access denied, please allow our app permission through Settings in your phone if you want to use our service.", comment: ""), preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default))
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Settings", comment: ""), style: .cancel) { _ in
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url, options: [:], completionHandler: { _ in
+                    //
+                })
+            }
+        })
+        present(alertController, animated: true)
+    }
+}

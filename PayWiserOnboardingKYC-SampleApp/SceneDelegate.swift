@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  PayWiserOnboardingKYC-SampleApp
 //
-//  Created by tjasa on 29/07/2020.
+//  Created by tjasa on 6/24/20.
 //  Copyright © 2020 Intech. All rights reserved.
 //
 
