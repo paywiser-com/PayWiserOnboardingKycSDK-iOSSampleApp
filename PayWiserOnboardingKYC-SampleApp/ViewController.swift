@@ -174,8 +174,10 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         let address2 = UserDefaults.standard.string(forKey: "data_address2") ?? nil
         let zipCode = UserDefaults.standard.string(forKey: "data_zip_code") ?? nil
         let city = UserDefaults.standard.string(forKey: "data_city") ?? nil
+        let email = UserDefaults.standard.string(forKey: "data_email") ?? nil
+        let mobileNumber = UserDefaults.standard.string(forKey: "data_phone_number") ?? nil
 
-        userData = KycUserData(firstName: firstName, middleName: middleName, lastName: lastName, address1: address1, address2: address2, zipCode: zipCode, city: city)
+        userData = KycUserData(firstName: firstName, middleName: middleName, lastName: lastName, address1: address1, address2: address2, zipCode: zipCode, city: city, email: email, mobileNumber: mobileNumber)
         
     }
     
@@ -200,7 +202,7 @@ extension ViewController {
         case .denied:
             showPhoneSettings(type: PermissionType.Camera.rawValue)
         case .restricted: // The user can't grant access due to restrictions.
-            return   // ????
+            return
         default:
             fatalError(NSLocalizedString("Camera Authorization Status not handled!", comment: ""))
         }
