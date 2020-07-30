@@ -42,7 +42,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PayWiserOnboardingKYC:
-    :commit: ab38d42ccb286d43c05b604ddbdb860058f16c73
+    :commit: 61810550f455c1e499afa6fc456a107258e4c257
     :git: https://github.com/tjasajan/PayWiserOnboardingKYC.git
 
 SPEC CHECKSUMS:

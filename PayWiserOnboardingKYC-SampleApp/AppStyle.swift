@@ -15,7 +15,7 @@ class AppStyle {
     static func setCustomStyle() {
         
         PayWiserOnboardingKYC.Style.Colors.statusBarColor = .systemBlue
-        PayWiserOnboardingKYC.Style.Colors.navBarColor = .systemBlue
+        PayWiserOnboardingKYC.Style.Colors.navbarColor = .systemBlue
         
         PayWiserOnboardingKYC.Style.Colors.backgroundColor = .white
         PayWiserOnboardingKYC.Style.Colors.secondaryBackgroundColor = .white
@@ -26,8 +26,8 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Colors.secondaryColor = .systemIndigo
         PayWiserOnboardingKYC.Style.Colors.tertiaryColor = .lightGray
         
-        PayWiserOnboardingKYC.Style.Colors.navBarTextColor = .white
-        PayWiserOnboardingKYC.Style.Colors.navBarButtonColor = .white
+        PayWiserOnboardingKYC.Style.Colors.navbarTextColor = .white
+        PayWiserOnboardingKYC.Style.Colors.navbarButtonColor = .white
         PayWiserOnboardingKYC.Style.Colors.titleTextColor = UIColor.systemBlue.withAlphaComponent(0.8)
         PayWiserOnboardingKYC.Style.Colors.textColor = .darkGray
         
@@ -45,7 +45,7 @@ class AppStyle {
     static func setDefaultStyle() {
         
         PayWiserOnboardingKYC.Style.Colors.statusBarColor = .systemBackground
-        PayWiserOnboardingKYC.Style.Colors.navBarColor = .systemBackground
+        PayWiserOnboardingKYC.Style.Colors.navbarColor = .systemBackground
         
         PayWiserOnboardingKYC.Style.Colors.backgroundColor = .systemGroupedBackground
         PayWiserOnboardingKYC.Style.Colors.secondaryBackgroundColor = .secondarySystemGroupedBackground
@@ -58,8 +58,8 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Colors.borderColor = .lightGray
         PayWiserOnboardingKYC.Style.Colors.warningColor = .systemRed
         
-        PayWiserOnboardingKYC.Style.Colors.navBarTextColor = .label
-        PayWiserOnboardingKYC.Style.Colors.navBarButtonColor = .systemBlue
+        PayWiserOnboardingKYC.Style.Colors.navbarTextColor = .label
+        PayWiserOnboardingKYC.Style.Colors.navbarButtonColor = .systemBlue
         PayWiserOnboardingKYC.Style.Colors.titleTextColor = .label
         PayWiserOnboardingKYC.Style.Colors.textColor = .secondaryLabel
         PayWiserOnboardingKYC.Style.Colors.buttonTextColor = .white
@@ -72,7 +72,7 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Fonts.text = UIFont.systemFont(ofSize: 12, weight: .regular)
         
         PayWiserOnboardingKYC.Style.Shapes.inputField = .Rectangle
-        PayWiserOnboardingKYC.Style.Shapes.navBarHeight = 44
+        PayWiserOnboardingKYC.Style.Shapes.navbarHeight = 44
         PayWiserOnboardingKYC.Style.Shapes.cornerRadius = 5
         PayWiserOnboardingKYC.Style.Shapes.showSeparators = true
         
