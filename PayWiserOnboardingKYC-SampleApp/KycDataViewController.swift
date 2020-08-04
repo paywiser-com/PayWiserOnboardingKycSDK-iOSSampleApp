@@ -70,7 +70,6 @@ class KycDataViewController : UIViewController {
                 
                 if showData == true {
                     self.KycTitle.text = NSLocalizedString("KYC Data", comment: "")
-                    //self.KycTitle.textColor = .darkGray
                     showData = false
                     self.CloseButton.isHidden = true
                 }

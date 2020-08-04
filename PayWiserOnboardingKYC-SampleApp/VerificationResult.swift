@@ -72,15 +72,6 @@ public class VerificationResult : VerificationResultProtocol {
         parent?.view.addSubview(initVC.view)
         initVC.didMove(toParent: parent)
         
-//        let parent = presentingVC.parent
-//        presentingVC.willMove(toParent: nil)
-//        presentingVC.view.removeFromSuperview()
-//        presentingVC.removeFromParent()
-//        parent?.addChild(initVC)
-//        parent?.view.addSubview(initVC.view)
-//        initVC.didMove(toParent: parent)
-        
-        
     }
     
     

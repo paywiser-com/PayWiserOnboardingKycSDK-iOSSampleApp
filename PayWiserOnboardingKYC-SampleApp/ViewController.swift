@@ -17,7 +17,6 @@ private enum PermissionType : String {
     case Microphone
 }
 
-//var presentingVC : UIViewController!
 var showData = false
 
 
@@ -122,8 +121,6 @@ class ViewController: UIViewController, IASKSettingsDelegate {
                 self.addChild(initVC)
                 self.view.addSubview(initVC.view)
                 initVC.didMove(toParent: self)
-                
-                //presentingVC = initVC
                 
                 self.hideLoading(vc: self)
                 
