@@ -7,7 +7,7 @@ target 'PayWiserOnboardingKYC-SampleApp' do
 
   # Pods for PayWiserOnboardingKYC-SampleApp
 
-  pod 'PayWiserOnboardingKYC', :git => 'https://github.com/tjasajan/PayWiserOnboardingKYC.git'
+  pod 'PayWiserOnboardingKYC', '~> 1.0.1'
   pod 'InAppSettingsKit'
 
 

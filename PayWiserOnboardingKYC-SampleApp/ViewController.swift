@@ -79,6 +79,8 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         if UserDefaults.standard.string(forKey: "kycId") != nil {
             GetDataButton.isEnabled = true
         }
+        UserDefaults.standard.removeObject(forKey: "data_email")
+        UserDefaults.standard.removeObject(forKey: "data_phone_number")
     }
     
     
@@ -172,12 +174,14 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         let lastName = UserDefaults.standard.string(forKey: "data_last_name") ?? nil
         let address1 = UserDefaults.standard.string(forKey: "data_address1") ?? nil
         let address2 = UserDefaults.standard.string(forKey: "data_address2") ?? nil
+        let address3 = UserDefaults.standard.string(forKey: "data_address3") ?? nil
         let zipCode = UserDefaults.standard.string(forKey: "data_zip_code") ?? nil
         let city = UserDefaults.standard.string(forKey: "data_city") ?? nil
+        let state = UserDefaults.standard.string(forKey: "data_state") ?? nil
         let email = UserDefaults.standard.string(forKey: "data_email") ?? nil
         let mobileNumber = UserDefaults.standard.string(forKey: "data_phone_number") ?? nil
 
-        userData = KycUserData(firstName: firstName, middleName: middleName, lastName: lastName, address1: address1, address2: address2, zipCode: zipCode, city: city, email: email, mobileNumber: mobileNumber)
+        userData = KycUserData(firstName: firstName, middleName: middleName, lastName: lastName, address1: address1, address2: address2, address3: address3, zipCode: zipCode, city: city, state: state, email: email, mobileNumber: mobileNumber)
         
     }
     

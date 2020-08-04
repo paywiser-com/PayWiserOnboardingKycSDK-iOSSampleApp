@@ -38,7 +38,11 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Fonts.text = UIFont.systemFont(ofSize: 13, weight: .regular)
         
         PayWiserOnboardingKYC.Style.Shapes.inputField = .Line
+        PayWiserOnboardingKYC.Style.Shapes.cornerRadius = 15
         PayWiserOnboardingKYC.Style.Shapes.showSeparators = false
+        
+        PayWiserOnboardingKYC.Style.MainButton.width = 250
+        PayWiserOnboardingKYC.Style.MainButton.style = .Outlined
         
     }
     
@@ -75,6 +79,9 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Shapes.navbarHeight = 44
         PayWiserOnboardingKYC.Style.Shapes.cornerRadius = 5
         PayWiserOnboardingKYC.Style.Shapes.showSeparators = true
+        
+        PayWiserOnboardingKYC.Style.MainButton.width = 0
+        PayWiserOnboardingKYC.Style.MainButton.style = .Default
         
     }
     
