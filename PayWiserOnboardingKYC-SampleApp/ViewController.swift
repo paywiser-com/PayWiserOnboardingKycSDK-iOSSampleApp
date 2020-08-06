@@ -78,8 +78,6 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         if UserDefaults.standard.string(forKey: "kycId") != nil {
             GetDataButton.isEnabled = true
         }
-        UserDefaults.standard.removeObject(forKey: "data_email")
-        UserDefaults.standard.removeObject(forKey: "data_phone_number")
     }
     
     
