@@ -23,12 +23,13 @@ struct KycData : Decodable {
 
 struct KycProcess : Decodable {
     
-    var AttendedMode : Bool
-    var UseVerification : Bool
+    var VideoStatus : String
+    var VideoStatusDetails : String?
     var VerificationStatus: String
+    var CheckStatus: String
     
     enum CodingKeys: String, CodingKey {
-        case AttendedMode, UseVerification, VerificationStatus
+        case VideoStatus, VideoStatusDetails, VerificationStatus, CheckStatus
     }
 }
 

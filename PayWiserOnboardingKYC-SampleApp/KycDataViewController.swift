@@ -19,9 +19,10 @@ class KycDataViewController : UIViewController {
     @IBOutlet weak var CloseButton: UIButton!
     
     
-    @IBOutlet weak var AttendedMode: UILabel!
-    @IBOutlet weak var UseVerification: UILabel!
+    @IBOutlet weak var VideoStatus: UILabel!
+    @IBOutlet weak var VideoStatusDetails: UILabel!
     @IBOutlet weak var VerificationStatus: UILabel!
+    @IBOutlet weak var CheckStatus: UILabel!
     
     @IBOutlet weak var FirstName: UILabel!
     @IBOutlet weak var MiddleName: UILabel!
@@ -58,6 +59,7 @@ class KycDataViewController : UIViewController {
         scrollView.isHidden = true
         DataNotAvailable.isHidden = true
         DocumentInfoNotAvailable.isHidden = true
+        CloseButton.isHidden = true
         
         showLoading(vc: self)
         
@@ -94,19 +96,10 @@ class KycDataViewController : UIViewController {
     
     func setKycValues(data: KycData) {
         
-        if data.Process.AttendedMode == true {
-            AttendedMode.text = NSLocalizedString("Mode: Attended", comment: "")
-        }
-        else {
-            AttendedMode.text = NSLocalizedString("Mode: Unattended", comment: "")
-        }
-        if data.Process.UseVerification == true {
-            UseVerification.text = NSLocalizedString("Human verification: Requested", comment: "")
-        }
-        else {
-            UseVerification.text = NSLocalizedString("Human verification: Not requested", comment: "")
-        }
+        VideoStatus.text = NSLocalizedString("Video status: ", comment: "") + data.Process.VideoStatus
+        VideoStatusDetails.text = NSLocalizedString("Video status details: ", comment: "") + (data.Process.VideoStatusDetails ?? "")
         VerificationStatus.text = NSLocalizedString("Human verification status: ", comment: "") + data.Process.VerificationStatus
+        CheckStatus.text = NSLocalizedString("Check status: ", comment: "") + data.Process.CheckStatus
         
         FirstName.text = NSLocalizedString("First name: ", comment: "") + (data.PersonalData.FirstName ?? "")
         MiddleName.text = NSLocalizedString("Middle name: ", comment: "") + (data.PersonalData.MiddleName ?? "")
