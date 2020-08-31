@@ -148,26 +148,6 @@
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Attended</string>
-			<key>Key</key>
-			<string>attended_video_mode</string>
-			<key>DefaultValue</key>
-			<false/>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Human verification</string>
-			<key>Key</key>
-			<string>human_verification</string>
-			<key>DefaultValue</key>
-			<false/>
-		</dict>
-		<dict>
-			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
 			<string>Language</string>
@@ -178,20 +158,10 @@
 			<key>Values</key>
 			<array>
 				<string>en</string>
-				<string>de</string>
-				<string>fr</string>
-				<string>es</string>
-				<string>ro</string>
-				<string>am</string>
 			</array>
 			<key>Titles</key>
 			<array>
 				<string>English</string>
-				<string>German</string>
-				<string>French</string>
-				<string>Spanish</string>
-				<string>Romanian</string>
-				<string>Amharic</string>
 			</array>
 		</dict>
 		<dict>

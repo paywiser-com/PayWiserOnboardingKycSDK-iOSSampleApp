@@ -151,18 +151,9 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         credentials = KycCredentials(username: sdkUsername, password: sdkPassword, endpointUrl: sdkBaseUrl)
         
         let referenceId = UUID().uuidString
-        var videoMode : VideoModeType = .U
-        let attendedMode = UserDefaults.standard.bool(forKey: "attended_video_mode")
-        if attendedMode == true {
-            videoMode = VideoModeType.A
-        }
-        else {
-            videoMode = VideoModeType.U
-        }
-        let requestVerification = UserDefaults.standard.bool(forKey: "human_verification")
         let language = UserDefaults.standard.string(forKey: "language_preference") ?? ""
         
-        settings = KycSettings(referenceID: referenceId, videoMode: videoMode, requestVerification: requestVerification, language: language)
+        settings = KycSettings(referenceID: referenceId, language: language)
         
         let firstName = UserDefaults.standard.string(forKey: "data_first_name") ?? nil
         let middleName = UserDefaults.standard.string(forKey: "data_middle_name") ?? nil
@@ -180,7 +171,7 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         
     }
     
-
+    
 }
 
 

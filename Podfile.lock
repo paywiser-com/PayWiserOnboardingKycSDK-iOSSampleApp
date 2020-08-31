@@ -6,7 +6,7 @@ PODS:
   - eIDWebRTC.bitcode (60.0.19018)
   - InAppSettingsKit (3.1.3)
   - ObjectMapper (3.5.3)
-  - PayWiserOnboardingKYC (1.0.2):
+  - PayWiserOnboardingKYC (1.0.3):
     - Alamofire (~> 5.2)
     - CountryPickerView
     - PhoneNumberKit (~> 3.1)
@@ -52,7 +52,7 @@ SPEC CHECKSUMS:
   eIDWebRTC.bitcode: da4b249181655948c23191e2d69a084c5ad426ab
   InAppSettingsKit: 665a44fe11d4f06be6ec91516ae8c8b11d658b26
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
-  PayWiserOnboardingKYC: 9f9e274d2b13baa181a3411d996ee52abc7e65f7
+  PayWiserOnboardingKYC: d26f80b87b1c3bdd992857003876e7d36e71b39a
   PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08

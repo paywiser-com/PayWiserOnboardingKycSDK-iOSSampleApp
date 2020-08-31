@@ -45,25 +45,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4p-O0-HrJ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-M5-9MP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="858"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC DATA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-9G-aMn" customClass="KycTitle" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="60" width="334" height="20.5"/>
+                                                <rect key="frame" x="40" y="40" width="334" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbQ-1M-oVd" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="100.5" width="334" height="14.5"/>
+                                                <rect key="frame" x="40" y="80.5" width="334" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-n8-SwQ">
-                                                <rect key="frame" x="50" y="125" width="324" height="88"/>
+                                                <rect key="frame" x="50" y="105" width="324" height="88"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRX-kM-Lzw" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
                                                         <rect key="frame" x="0.0" y="0.0" width="324" height="14.5"/>
@@ -92,13 +92,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNJ-6I-K3B" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="233" width="334" height="14.5"/>
+                                                <rect key="frame" x="40" y="213" width="334" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-Eq-xS4">
-                                                <rect key="frame" x="50" y="267.5" width="324" height="235"/>
+                                                <rect key="frame" x="50" y="247.5" width="324" height="235"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90a-Ft-XbR" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
                                                         <rect key="frame" x="0.0" y="0.0" width="324" height="14.5"/>
@@ -163,13 +163,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI3-Lc-uxE" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="522.5" width="334" height="14.5"/>
+                                                <rect key="frame" x="40" y="502.5" width="334" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e2J-1J-b4G">
-                                                <rect key="frame" x="50" y="547" width="324" height="259.5"/>
+                                                <rect key="frame" x="50" y="527" width="324" height="259.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZM-ye-3UP" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
                                                         <rect key="frame" x="0.0" y="0.0" width="324" height="14.5"/>
@@ -240,7 +240,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIV-Pn-1I0" customClass="KycText" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="50" y="547" width="324" height="90"/>
+                                                <rect key="frame" x="50" y="527" width="324" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="xtS-VU-g1U"/>
                                                 </constraints>
@@ -258,7 +258,7 @@ It can take up to a minute before full data is ready for retrieval.</string>
                                             <constraint firstItem="NUa-9G-aMn" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="40" id="2nj-dh-AHN"/>
                                             <constraint firstItem="Sdf-Eq-xS4" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="50" id="4F6-Ai-Xln"/>
                                             <constraint firstItem="wbQ-1M-oVd" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="40" id="BYw-qk-78X"/>
-                                            <constraint firstItem="NUa-9G-aMn" firstAttribute="top" secondItem="yjs-M5-9MP" secondAttribute="top" constant="60" id="HiY-Uv-6Uv"/>
+                                            <constraint firstItem="NUa-9G-aMn" firstAttribute="top" secondItem="yjs-M5-9MP" secondAttribute="top" constant="40" id="HiY-Uv-6Uv"/>
                                             <constraint firstItem="HIV-Pn-1I0" firstAttribute="top" secondItem="dI3-Lc-uxE" secondAttribute="bottom" constant="10" id="PoF-4v-eVc"/>
                                             <constraint firstItem="cLC-n8-SwQ" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="50" id="QLc-Ns-zaZ"/>
                                             <constraint firstItem="cLC-n8-SwQ" firstAttribute="top" secondItem="wbQ-1M-oVd" secondAttribute="bottom" constant="10" id="UB8-Lh-j1a"/>
@@ -306,7 +306,7 @@ It can take up to a minute before full data is ready for retrieval.</string>
                             <constraint firstItem="1Ms-eB-U8o" firstAttribute="bottom" secondItem="V4p-O0-HrJ" secondAttribute="bottom" id="gBi-0k-4A1"/>
                             <constraint firstItem="V4p-O0-HrJ" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" id="lKc-WV-mVF"/>
                             <constraint firstItem="jTy-e7-Rb0" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" id="m0d-hh-jxj"/>
-                            <constraint firstItem="V4p-O0-HrJ" firstAttribute="top" secondItem="1Ms-eB-U8o" secondAttribute="top" id="mwj-Ne-nfS"/>
+                            <constraint firstItem="V4p-O0-HrJ" firstAttribute="top" secondItem="cQH-0j-XXR" secondAttribute="bottom" id="mwj-Ne-nfS"/>
                             <constraint firstItem="jTy-e7-Rb0" firstAttribute="trailing" secondItem="1Ms-eB-U8o" secondAttribute="trailing" id="nT1-Lz-QEU"/>
                             <constraint firstItem="sO7-xP-Fp6" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" constant="40" id="oYj-41-VJT"/>
                             <constraint firstItem="1Ms-eB-U8o" firstAttribute="trailing" secondItem="n9Y-Lh-2t0" secondAttribute="trailing" constant="20" id="vt5-y9-ibc"/>
