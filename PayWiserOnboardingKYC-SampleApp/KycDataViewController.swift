@@ -88,6 +88,13 @@ class KycDataViewController : UIViewController {
             }
             else {
                 self.DataNotAvailable.isHidden = false
+                if showData == true {
+                    showData = false
+                    self.CloseButton.isHidden = true
+                }
+                else {
+                    self.CloseButton.isHidden = false
+                }
             }
             self.hideLoading(vc: self)
         })
