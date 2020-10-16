@@ -12,8 +12,8 @@
         <!--Loading View Controller-->
         <scene sceneID="nx3-uQ-wBF">
             <objects>
-                <viewController storyboardIdentifier="LoadingViewController" id="VGS-GO-jf3" customClass="LoadingViewController" customModule="KYCTestApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="giv-Eb-fhb" customClass="KycSecondaryView" customModule="PayWiserOnboardingKYC">
+                <viewController storyboardIdentifier="LoadingViewController" id="VGS-GO-jf3" customClass="LoadingViewController" customModule="KYCSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="giv-Eb-fhb" customClass="KycView" customModule="PayWiserOnboardingKYC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

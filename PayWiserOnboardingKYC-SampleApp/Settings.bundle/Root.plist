@@ -46,7 +46,7 @@
 			<key>Key</key>
 			<string>sdk_api_url</string>
 			<key>DefaultValue</key>
-			<string>https://onboarding-kyc-dev.paywiser.eu/mobile</string>
+			<string></string>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -62,7 +62,7 @@
 			<key>Key</key>
 			<string>sdk_api_username</string>
 			<key>DefaultValue</key>
-			<string>111</string>
+			<string></string>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -78,7 +78,7 @@
 			<key>Key</key>
 			<string>sdk_api_password</string>
 			<key>DefaultValue</key>
-			<string>222</string>
+			<string></string>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
