@@ -13,8 +13,10 @@ import PayWiserOnboardingKYC
 struct KycResult {
     
     static var AppReferenceID : String?
+    static var ReferenceNumber : String?
     static var KycReferenceID : String?
     static var KycID : String?
+    static var PersonID : String?
     static var StatusCode : Int?
     static var StatusDescription : String?
 }
@@ -28,11 +30,10 @@ public class VerificationResult : VerificationResultProtocol {
     public func success(event : SuccessEvent) -> Void {
         
         KycResult.AppReferenceID = event.getAppReferenceID()
+        KycResult.ReferenceNumber = event.getReferenceNumber()
         KycResult.KycReferenceID = event.getKycReferenceID()
-        
-        let kycId = event.getKycID()
-        KycResult.KycID = kycId
-        UserDefaults.standard.set(kycId, forKey: "kycId")
+        KycResult.KycID = event.getKycID()
+        KycResult.PersonID = event.getPersonID()
         
         goToResultScreen(success: true)
     }
@@ -40,7 +41,11 @@ public class VerificationResult : VerificationResultProtocol {
     public func error(event: ErrorEvent) {
         
         KycResult.AppReferenceID = event.getAppReferenceID()
+        KycResult.ReferenceNumber = event.getReferenceNumber()
         KycResult.KycReferenceID = event.getKycReferenceID()
+        KycResult.KycID = event.getKycID()
+        KycResult.PersonID = event.getPersonID()
+        
         KycResult.StatusCode = event.getStatusCode()
         KycResult.StatusDescription = event.getStatusDescription()
         
@@ -71,6 +76,15 @@ public class VerificationResult : VerificationResultProtocol {
         parent?.addChild(initVC)
         parent?.view.addSubview(initVC.view)
         initVC.didMove(toParent: parent)
+        
+//        let parent = presentingVC.parent
+//        presentingVC.willMove(toParent: nil)
+//        presentingVC.view.removeFromSuperview()
+//        presentingVC.removeFromParent()
+//        parent?.addChild(initVC)
+//        parent?.view.addSubview(initVC.view)
+//        initVC.didMove(toParent: parent)
+        
         
     }
     

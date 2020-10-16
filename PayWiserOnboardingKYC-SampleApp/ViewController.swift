@@ -17,14 +17,13 @@ private enum PermissionType : String {
     case Microphone
 }
 
-var showData = false
-
 
 class ViewController: UIViewController, IASKSettingsDelegate {
     
+    var latestSdkVersion = "v2.0.0"
     
+    @IBOutlet weak var sdkVersion: KycTextLabel!
     @IBOutlet weak var StartButton: UIButton!
-    @IBOutlet weak var GetDataButton: UIButton!
     
     var credentials : KycCredentials?
     var settings : KycSettings?
@@ -32,24 +31,15 @@ class ViewController: UIViewController, IASKSettingsDelegate {
     
     var kycStyle : String = "default"
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserDefaults.standard.addObserver(self, forKeyPath: "kycId", options: .new, context: nil)
         UserDefaults.standard.addObserver(self, forKeyPath: "kyc_style_preference", options: .new, context: nil)
-        
-        GetDataButton.isEnabled = false
         
         getStyle()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "kycId" {
-            if UserDefaults.standard.string(forKey: "kycId") != nil {
-                GetDataButton.isEnabled = true
-            }
-        }
         if keyPath == "kyc_style_preference" {
             getStyle()
         }
@@ -75,9 +65,7 @@ class ViewController: UIViewController, IASKSettingsDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if UserDefaults.standard.string(forKey: "kycId") != nil {
-            GetDataButton.isEnabled = true
-        }
+        sdkVersion.text = latestSdkVersion
     }
     
     
@@ -130,18 +118,6 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         }
     }
     
-    
-    @IBAction func onGetKycData(_ sender: Any) {
-        
-        showData = true
-        
-        let initStoryboard = UIStoryboard(name: "KycDataViewController", bundle: nil)
-        let initVC = initStoryboard.instantiateViewController(withIdentifier: "KycDataViewController")
-        
-        self.show(initVC, sender: nil)
-    }
-    
-    
     func getKycSettings() {
         
         let sdkUsername = UserDefaults.standard.string(forKey: "sdk_api_username") ?? ""
@@ -151,9 +127,11 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         credentials = KycCredentials(username: sdkUsername, password: sdkPassword, endpointUrl: sdkBaseUrl)
         
         let referenceId = UUID().uuidString
+        let referenceNumber = UserDefaults.standard.string(forKey: "reference_number") ?? ""
         let language = UserDefaults.standard.string(forKey: "language_preference") ?? ""
+        let createIban = UserDefaults.standard.bool(forKey: "create_iban")
         
-        settings = KycSettings(referenceID: referenceId, language: language)
+        settings = KycSettings(referenceID: referenceId, referenceNumber: referenceNumber, language: language, createIBAN: createIban)
         
         let firstName = UserDefaults.standard.string(forKey: "data_first_name") ?? nil
         let middleName = UserDefaults.standard.string(forKey: "data_middle_name") ?? nil
@@ -164,10 +142,11 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         let zipCode = UserDefaults.standard.string(forKey: "data_zip_code") ?? nil
         let city = UserDefaults.standard.string(forKey: "data_city") ?? nil
         let state = UserDefaults.standard.string(forKey: "data_state") ?? nil
+        let countryCode = UserDefaults.standard.string(forKey: "data_country_code") ?? nil
         let email = UserDefaults.standard.string(forKey: "data_email") ?? nil
         let mobileNumber = UserDefaults.standard.string(forKey: "data_phone_number") ?? nil
 
-        userData = KycUserData(firstName: firstName, middleName: middleName, lastName: lastName, address1: address1, address2: address2, address3: address3, zipCode: zipCode, city: city, state: state, email: email, mobileNumber: mobileNumber)
+        userData = KycUserData(firstName: firstName, middleName: middleName, lastName: lastName, address1: address1, address2: address2, address3: address3, zipCode: zipCode, city: city, state: state, countryCode: countryCode, email: email, mobileNumber: mobileNumber)
         
     }
     

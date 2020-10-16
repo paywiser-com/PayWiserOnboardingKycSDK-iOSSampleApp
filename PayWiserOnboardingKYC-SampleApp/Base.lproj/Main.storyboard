@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="KYCSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="KYCTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="KycSecondaryView" customModule="PayWiserOnboardingKYC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-zT-htb" customClass="KycButton" customModule="PayWiserOnboardingKYC">
-                                <rect key="frame" x="40" y="348" width="334" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-zT-htb" customClass="KycButton" customModule="PayWiserOnboardingKYC">
+                                <rect key="frame" x="40" y="428" width="334" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BZR-4O-R9E"/>
                                 </constraints>
@@ -29,7 +31,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC Sample App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-JO-Dfr" customClass="KycNavbar" customModule="PayWiserOnboardingKYC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="XUn-68-Deu"/>
                                 </constraints>
@@ -37,7 +39,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bn-cD-XTR" customClass="KycButtonNavbar" customModule="PayWiserOnboardingKYC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bn-cD-XTR" customClass="KycButtonNavbar" customModule="PayWiserOnboardingKYC">
                                 <rect key="frame" x="372" y="53" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="6ti-t4-Cfp"/>
@@ -48,59 +50,40 @@
                                     <action selector="openSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="haJ-94-Es5"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="It can take up to a minute before full data is ready for retrieval. " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jp-UL-nGN" customClass="KycText" customModule="PayWiserOnboardingKYC">
-                                <rect key="frame" x="40" y="428" width="334" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Yy0-uy-MWe"/>
-                                </constraints>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-Jo-Kdb" customClass="KycButton" customModule="PayWiserOnboardingKYC">
-                                <rect key="frame" x="40" y="496" width="334" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="f4j-9E-WLx"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="GET LAST KYC DATA"/>
-                                <connections>
-                                    <action selector="onGetKycData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2x-b5-HfX"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axm-q2-ZPw" customClass="KycStatusBar" customModule="PayWiserOnboardingKYC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkr-cV-JYZ" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
+                                <rect key="frame" x="327" y="178" width="47" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Jp-UL-nGN" secondAttribute="trailing" constant="40" id="037-oS-va8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Bn-cD-XTR" secondAttribute="trailing" constant="16" id="1Jf-iI-dy2"/>
                             <constraint firstItem="Axm-q2-ZPw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Jp-JY-I1f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Axm-q2-ZPw" secondAttribute="bottom" id="BL2-wZ-aOp"/>
                             <constraint firstItem="O8g-JO-Dfr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Byq-Dh-QvX"/>
-                            <constraint firstItem="zFZ-Jo-Kdb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="MbE-yx-gdE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dkr-cV-JYZ" secondAttribute="trailing" constant="40" id="PiR-yx-nET"/>
+                            <constraint firstItem="dkr-cV-JYZ" firstAttribute="top" secondItem="O8g-JO-Dfr" secondAttribute="bottom" constant="90" id="QxO-lu-pCW"/>
                             <constraint firstItem="O8g-JO-Dfr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vej-Ny-Kqa"/>
                             <constraint firstAttribute="trailing" secondItem="Axm-q2-ZPw" secondAttribute="trailing" id="Vz5-kT-3he"/>
-                            <constraint firstItem="Gqg-zT-htb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="WsJ-Ub-Y3s"/>
+                            <constraint firstItem="Gqg-zT-htb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="40" id="WsJ-Ub-Y3s"/>
                             <constraint firstItem="O8g-JO-Dfr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X6F-Ms-yIe"/>
-                            <constraint firstItem="Gqg-zT-htb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="Zkv-vS-uHS"/>
+                            <constraint firstItem="Gqg-zT-htb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zkv-vS-uHS"/>
                             <constraint firstItem="1Bn-cD-XTR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="cDc-ST-SVG"/>
-                            <constraint firstItem="2Jp-UL-nGN" firstAttribute="top" secondItem="Gqg-zT-htb" secondAttribute="bottom" constant="40" id="gca-Nz-B1O"/>
                             <constraint firstItem="Axm-q2-ZPw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lDb-Uu-4gc"/>
-                            <constraint firstItem="2Jp-UL-nGN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="lPS-DB-akr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zFZ-Jo-Kdb" secondAttribute="trailing" constant="40" id="nfL-yD-FU5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gqg-zT-htb" secondAttribute="trailing" constant="40" id="qky-ya-ag0"/>
-                            <constraint firstItem="zFZ-Jo-Kdb" firstAttribute="top" secondItem="2Jp-UL-nGN" secondAttribute="bottom" constant="20" id="sOA-sX-kpM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gqg-zT-htb" secondAttribute="trailing" priority="999" constant="40" id="qky-ya-ag0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9vS-ds-q3Y"/>
                     <connections>
-                        <outlet property="GetDataButton" destination="zFZ-Jo-Kdb" id="ma5-7A-7FT"/>
                         <outlet property="StartButton" destination="Gqg-zT-htb" id="RMB-v2-eSB"/>
+                        <outlet property="sdkVersion" destination="dkr-cV-JYZ" id="9Vu-Sm-7uf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,5 +93,8 @@
     </scenes>
     <resources>
         <image name="settings" width="50" height="50"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

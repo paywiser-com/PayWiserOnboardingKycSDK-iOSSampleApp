@@ -31,7 +31,7 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Colors.titleTextColor = UIColor.systemBlue.withAlphaComponent(0.8)
         PayWiserOnboardingKYC.Style.Colors.textColor = .darkGray
         
-        PayWiserOnboardingKYC.Style.Texts.navbarTitle = "KYC Sample App"
+        //PayWiserOnboardingKYC.Style.Texts.navbarTitle = "KYC Sample App"
         
         PayWiserOnboardingKYC.Style.Fonts.navbarTitle = UIFont.systemFont(ofSize: 17, weight: .semibold)
         PayWiserOnboardingKYC.Style.Fonts.titleText = UIFont.systemFont(ofSize: 20, weight: .medium)
@@ -69,7 +69,7 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Colors.buttonTextColor = .white
         PayWiserOnboardingKYC.Style.Colors.separatorColor = .separator
         
-        PayWiserOnboardingKYC.Style.Texts.navbarTitle = "PaywiserOnboardingKYC"
+        //PayWiserOnboardingKYC.Style.Texts.navbarTitle = "PaywiserOnboardingKYC"
         
         PayWiserOnboardingKYC.Style.Fonts.navbarTitle = UIFont.systemFont(ofSize: 17, weight: .medium)
         PayWiserOnboardingKYC.Style.Fonts.titleText = UIFont.systemFont(ofSize: 17, weight: .regular)

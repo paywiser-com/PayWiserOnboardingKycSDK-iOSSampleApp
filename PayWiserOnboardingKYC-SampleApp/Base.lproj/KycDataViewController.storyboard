@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Kyc Data View Controller-->
         <scene sceneID="TPQ-Jk-Ycp">
             <objects>
-                <viewController storyboardIdentifier="KycDataViewController" id="QbW-NG-F2C" customClass="KycDataViewController" customModule="KYCSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KycDataViewController" id="QbW-NG-F2C" customClass="KycDataViewController" customModule="KYCTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hsp-KQ-bWc" customClass="KycSecondaryView" customModule="PayWiserOnboardingKYC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTy-e7-Rb0" customClass="KycStatusBar" customModule="PayWiserOnboardingKYC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC Sample App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQH-0j-XXR" customClass="KycNavbar" customModule="PayWiserOnboardingKYC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="AMV-HI-dsZ"/>
                                 </constraints>
@@ -29,7 +27,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9Y-Lh-2t0" customClass="KycButtonNavbar" customModule="PayWiserOnboardingKYC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9Y-Lh-2t0" customClass="KycButtonNavbar" customModule="PayWiserOnboardingKYC">
                                 <rect key="frame" x="355" y="51" width="39" height="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,313 +36,115 @@
                                     <action selector="onClose:" destination="QbW-NG-F2C" eventType="touchUpInside" id="eAS-j7-fbK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC data is not available, please try again later." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-xP-Fp6" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                <rect key="frame" x="40" y="144" width="334" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTy-e7-Rb0" customClass="KycStatusBar" customModule="PayWiserOnboardingKYC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC COMPLETED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-9G-aMn" customClass="KycTitle" customModule="PayWiserOnboardingKYC">
+                                <rect key="frame" x="40" y="128" width="334" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4p-O0-HrJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-n8-SwQ">
+                                <rect key="frame" x="40" y="188.5" width="334" height="220"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-M5-9MP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="858"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC DATA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-9G-aMn" customClass="KycTitle" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="40" width="334" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbQ-1M-oVd" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="80.5" width="334" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-n8-SwQ">
-                                                <rect key="frame" x="50" y="105" width="324" height="88"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRX-kM-Lzw" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video status details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX3-V0-oqo" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="24.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA4-Mu-ECd" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="49" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-cd-gBM" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="73.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNJ-6I-K3B" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="213" width="334" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-Eq-xS4">
-                                                <rect key="frame" x="50" y="247.5" width="324" height="235"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90a-Ft-XbR" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF4-36-5Z4" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="24.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8q-Tj-flO" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="49" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjD-V7-5iG" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="73.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plL-tq-QzX" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="98" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-Hy-nhj" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="122.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtg-3E-BJd" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="147" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MG-k5-suL" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="171.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9R-ll-L2N" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="196" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zys-A1-gBC" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="220.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI3-Lc-uxE" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="40" y="502.5" width="334" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e2J-1J-b4G">
-                                                <rect key="frame" x="50" y="527" width="324" height="259.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZM-ye-3UP" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3B-Pj-Art" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="24.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issuer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udt-xD-nh2" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="49" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiry date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-pN-dj8" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="73.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZT-29-UE1" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="98" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlS-dc-vuS" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="122.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pM-qU-9w8" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="147" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgJ-Rn-U8E" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="171.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-Va-k1q" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="196" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONL-qN-lXh" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="220.5" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCU-bN-Vnl" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
-                                                        <rect key="frame" x="0.0" y="245" width="324" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIV-Pn-1I0" customClass="KycText" customModule="PayWiserOnboardingKYC">
-                                                <rect key="frame" x="50" y="527" width="324" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="xtS-VU-g1U"/>
-                                                </constraints>
-                                                <string key="text">Data is not available yet, please check a bit later.
-
-It can take up to a minute before full data is ready for retrieval.</string>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppReferenceID" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRX-kM-Lzw" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="NUa-9G-aMn" secondAttribute="trailing" constant="40" id="0pa-GB-e05"/>
-                                            <constraint firstItem="e2J-1J-b4G" firstAttribute="top" secondItem="dI3-Lc-uxE" secondAttribute="bottom" constant="10" id="0yM-6R-Jtr"/>
-                                            <constraint firstItem="NUa-9G-aMn" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="40" id="2nj-dh-AHN"/>
-                                            <constraint firstItem="Sdf-Eq-xS4" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="50" id="4F6-Ai-Xln"/>
-                                            <constraint firstItem="wbQ-1M-oVd" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="40" id="BYw-qk-78X"/>
-                                            <constraint firstItem="NUa-9G-aMn" firstAttribute="top" secondItem="yjs-M5-9MP" secondAttribute="top" constant="40" id="HiY-Uv-6Uv"/>
-                                            <constraint firstItem="HIV-Pn-1I0" firstAttribute="top" secondItem="dI3-Lc-uxE" secondAttribute="bottom" constant="10" id="PoF-4v-eVc"/>
-                                            <constraint firstItem="cLC-n8-SwQ" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="50" id="QLc-Ns-zaZ"/>
-                                            <constraint firstItem="cLC-n8-SwQ" firstAttribute="top" secondItem="wbQ-1M-oVd" secondAttribute="bottom" constant="10" id="UB8-Lh-j1a"/>
-                                            <constraint firstAttribute="trailing" secondItem="RNJ-6I-K3B" secondAttribute="trailing" constant="40" id="YdS-Hb-lRg"/>
-                                            <constraint firstItem="RNJ-6I-K3B" firstAttribute="top" secondItem="cLC-n8-SwQ" secondAttribute="bottom" constant="20" id="bsI-yX-7W5"/>
-                                            <constraint firstItem="e2J-1J-b4G" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="50" id="dmx-Ws-CtG"/>
-                                            <constraint firstAttribute="trailing" secondItem="dI3-Lc-uxE" secondAttribute="trailing" constant="40" id="fH6-Oy-Aai"/>
-                                            <constraint firstAttribute="trailing" secondItem="e2J-1J-b4G" secondAttribute="trailing" constant="40" id="fO6-9L-ij9"/>
-                                            <constraint firstItem="RNJ-6I-K3B" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="40" id="hAy-hs-iK5"/>
-                                            <constraint firstItem="Sdf-Eq-xS4" firstAttribute="top" secondItem="RNJ-6I-K3B" secondAttribute="bottom" constant="20" id="iyY-fx-NU7"/>
-                                            <constraint firstItem="wbQ-1M-oVd" firstAttribute="top" secondItem="NUa-9G-aMn" secondAttribute="bottom" constant="20" id="q7E-km-gvX"/>
-                                            <constraint firstAttribute="trailing" secondItem="HIV-Pn-1I0" secondAttribute="trailing" constant="40" id="qZ5-YR-kls"/>
-                                            <constraint firstItem="dI3-Lc-uxE" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="40" id="r4W-pw-P76"/>
-                                            <constraint firstAttribute="trailing" secondItem="cLC-n8-SwQ" secondAttribute="trailing" constant="40" id="r6r-r4-Qi5"/>
-                                            <constraint firstAttribute="trailing" secondItem="wbQ-1M-oVd" secondAttribute="trailing" constant="40" id="uz0-Iq-hfC"/>
-                                            <constraint firstItem="dI3-Lc-uxE" firstAttribute="top" secondItem="Sdf-Eq-xS4" secondAttribute="bottom" constant="20" id="xUG-j7-N4H"/>
-                                            <constraint firstAttribute="height" constant="858" id="y09-tw-lZg"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sdf-Eq-xS4" secondAttribute="trailing" constant="40" id="yWv-cf-eEh"/>
-                                            <constraint firstItem="HIV-Pn-1I0" firstAttribute="leading" secondItem="yjs-M5-9MP" secondAttribute="leading" constant="50" id="z1L-nL-jnc"/>
+                                            <constraint firstAttribute="height" constant="36" id="uPv-3j-XLZ"/>
                                         </constraints>
-                                    </view>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ReferenceNumber" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX3-V0-oqo" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
+                                        <rect key="frame" x="0.0" y="46" width="334" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Iqr-dg-O0f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KycReferenceID" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA4-Mu-ECd" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
+                                        <rect key="frame" x="0.0" y="92" width="334" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="BQo-mJ-jse"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KycID" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-cd-gBM" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
+                                        <rect key="frame" x="0.0" y="138" width="334" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="u5F-9F-iCy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PersonID" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45J-q4-C9i" customClass="KycTextLabel" customModule="PayWiserOnboardingKYC">
+                                        <rect key="frame" x="0.0" y="184" width="334" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Xsa-qu-5SC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="yjs-M5-9MP" firstAttribute="leading" secondItem="i9B-PW-fv5" secondAttribute="leading" id="DGa-AE-g6w"/>
-                                    <constraint firstItem="yjs-M5-9MP" firstAttribute="bottom" secondItem="i9B-PW-fv5" secondAttribute="bottom" id="Jqp-ib-mVQ"/>
-                                    <constraint firstItem="yjs-M5-9MP" firstAttribute="trailing" secondItem="i9B-PW-fv5" secondAttribute="trailing" id="PZv-rd-QCP"/>
-                                    <constraint firstItem="yjs-M5-9MP" firstAttribute="width" secondItem="A32-2W-gYh" secondAttribute="width" id="S29-yP-Cvy"/>
-                                    <constraint firstItem="yjs-M5-9MP" firstAttribute="top" secondItem="i9B-PW-fv5" secondAttribute="top" id="uvU-cY-AK9"/>
+                                    <constraint firstItem="HA4-Mu-ECd" firstAttribute="leading" secondItem="cLC-n8-SwQ" secondAttribute="leading" id="3c8-qS-og6"/>
+                                    <constraint firstItem="QRX-kM-Lzw" firstAttribute="top" secondItem="cLC-n8-SwQ" secondAttribute="top" id="4Io-hs-qq7"/>
+                                    <constraint firstAttribute="trailing" secondItem="QRX-kM-Lzw" secondAttribute="trailing" id="575-Ak-YRO"/>
+                                    <constraint firstItem="UX3-V0-oqo" firstAttribute="leading" secondItem="cLC-n8-SwQ" secondAttribute="leading" id="9ro-9I-7Ci"/>
+                                    <constraint firstAttribute="trailing" secondItem="QRX-kM-Lzw" secondAttribute="trailing" id="Efn-ly-hjl"/>
+                                    <constraint firstItem="vbB-cd-gBM" firstAttribute="top" secondItem="HA4-Mu-ECd" secondAttribute="bottom" constant="10" id="HQN-Go-3Z4"/>
+                                    <constraint firstItem="UX3-V0-oqo" firstAttribute="top" secondItem="QRX-kM-Lzw" secondAttribute="bottom" constant="10" id="L7z-Ws-w7y"/>
+                                    <constraint firstItem="45J-q4-C9i" firstAttribute="top" secondItem="vbB-cd-gBM" secondAttribute="bottom" constant="10" id="MS7-eh-zYb"/>
+                                    <constraint firstItem="45J-q4-C9i" firstAttribute="leading" secondItem="cLC-n8-SwQ" secondAttribute="leading" id="My8-Y2-3x7"/>
+                                    <constraint firstAttribute="trailing" secondItem="HA4-Mu-ECd" secondAttribute="trailing" id="Ux4-f9-LKA"/>
+                                    <constraint firstItem="QRX-kM-Lzw" firstAttribute="top" secondItem="cLC-n8-SwQ" secondAttribute="top" id="XSM-EM-xfi"/>
+                                    <constraint firstItem="vbB-cd-gBM" firstAttribute="leading" secondItem="cLC-n8-SwQ" secondAttribute="leading" id="Y1f-Ko-2cf"/>
+                                    <constraint firstAttribute="trailing" secondItem="UX3-V0-oqo" secondAttribute="trailing" id="YsO-4b-rfa"/>
+                                    <constraint firstItem="HA4-Mu-ECd" firstAttribute="top" secondItem="UX3-V0-oqo" secondAttribute="bottom" constant="10" id="bGy-Ef-fQE"/>
+                                    <constraint firstItem="QRX-kM-Lzw" firstAttribute="leading" secondItem="cLC-n8-SwQ" secondAttribute="leading" id="eID-Eu-skU"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbB-cd-gBM" secondAttribute="trailing" id="ivX-le-zeP"/>
+                                    <constraint firstAttribute="trailing" secondItem="45J-q4-C9i" secondAttribute="trailing" id="jwx-Aa-lDJ"/>
+                                    <constraint firstItem="QRX-kM-Lzw" firstAttribute="leading" secondItem="cLC-n8-SwQ" secondAttribute="leading" id="qwe-mC-Kpp"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="i9B-PW-fv5"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="A32-2W-gYh"/>
-                            </scrollView>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1Ms-eB-U8o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V4p-O0-HrJ" firstAttribute="trailing" secondItem="1Ms-eB-U8o" secondAttribute="trailing" id="EWq-ZZ-Kez"/>
-                            <constraint firstItem="1Ms-eB-U8o" firstAttribute="trailing" secondItem="sO7-xP-Fp6" secondAttribute="trailing" constant="40" id="TFh-au-pVs"/>
+                            <constraint firstItem="1Ms-eB-U8o" firstAttribute="trailing" secondItem="NUa-9G-aMn" secondAttribute="trailing" constant="40" id="Gco-an-rGN"/>
+                            <constraint firstItem="NUa-9G-aMn" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" constant="40" id="LSi-Ch-Aug"/>
                             <constraint firstItem="1Ms-eB-U8o" firstAttribute="top" secondItem="jTy-e7-Rb0" secondAttribute="bottom" id="UjP-Y1-E8P"/>
-                            <constraint firstItem="sO7-xP-Fp6" firstAttribute="top" secondItem="1Ms-eB-U8o" secondAttribute="top" constant="100" id="XBM-qF-xTR"/>
+                            <constraint firstItem="1Ms-eB-U8o" firstAttribute="trailing" secondItem="cLC-n8-SwQ" secondAttribute="trailing" constant="40" id="VSd-zV-wb9"/>
                             <constraint firstItem="cQH-0j-XXR" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" id="Xvd-lM-7Zq"/>
                             <constraint firstItem="cQH-0j-XXR" firstAttribute="top" secondItem="jTy-e7-Rb0" secondAttribute="bottom" id="Zqt-M7-49R"/>
                             <constraint firstItem="n9Y-Lh-2t0" firstAttribute="top" secondItem="cQH-0j-XXR" secondAttribute="top" constant="7" id="a4U-cW-2bo"/>
+                            <constraint firstItem="NUa-9G-aMn" firstAttribute="top" secondItem="cQH-0j-XXR" secondAttribute="bottom" constant="40" id="aBJ-4K-L9Z"/>
                             <constraint firstItem="jTy-e7-Rb0" firstAttribute="top" secondItem="Hsp-KQ-bWc" secondAttribute="top" id="clL-j4-TbR"/>
                             <constraint firstItem="cQH-0j-XXR" firstAttribute="trailing" secondItem="1Ms-eB-U8o" secondAttribute="trailing" id="euc-5P-Mlu"/>
-                            <constraint firstItem="1Ms-eB-U8o" firstAttribute="bottom" secondItem="V4p-O0-HrJ" secondAttribute="bottom" id="gBi-0k-4A1"/>
-                            <constraint firstItem="V4p-O0-HrJ" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" id="lKc-WV-mVF"/>
+                            <constraint firstItem="cLC-n8-SwQ" firstAttribute="top" secondItem="NUa-9G-aMn" secondAttribute="bottom" constant="40" id="fDR-6y-fje"/>
                             <constraint firstItem="jTy-e7-Rb0" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" id="m0d-hh-jxj"/>
-                            <constraint firstItem="V4p-O0-HrJ" firstAttribute="top" secondItem="cQH-0j-XXR" secondAttribute="bottom" id="mwj-Ne-nfS"/>
                             <constraint firstItem="jTy-e7-Rb0" firstAttribute="trailing" secondItem="1Ms-eB-U8o" secondAttribute="trailing" id="nT1-Lz-QEU"/>
-                            <constraint firstItem="sO7-xP-Fp6" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" constant="40" id="oYj-41-VJT"/>
                             <constraint firstItem="1Ms-eB-U8o" firstAttribute="trailing" secondItem="n9Y-Lh-2t0" secondAttribute="trailing" constant="20" id="vt5-y9-ibc"/>
+                            <constraint firstItem="cLC-n8-SwQ" firstAttribute="leading" secondItem="1Ms-eB-U8o" secondAttribute="leading" constant="40" id="vyf-QR-FAk"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="1Ms-eB-U8o"/>
                     </view>
                     <connections>
-                        <outlet property="Address1" destination="nAr-Hy-nhj" id="Nbq-GR-dDH"/>
-                        <outlet property="Address2" destination="Rtg-3E-BJd" id="adk-Gz-PDU"/>
-                        <outlet property="BirthDate" destination="BgJ-Rn-U8E" id="sxk-d7-f3o"/>
-                        <outlet property="CheckStatus" destination="vbB-cd-gBM" id="8UK-iE-mAp"/>
-                        <outlet property="City" destination="t9R-ll-L2N" id="zGG-ae-FNc"/>
-                        <outlet property="Classification" destination="WZM-ye-3UP" id="dwF-ie-gBl"/>
+                        <outlet property="AppReferenceID" destination="QRX-kM-Lzw" id="mCf-C4-AjD"/>
                         <outlet property="CloseButton" destination="n9Y-Lh-2t0" id="fSs-WO-LWT"/>
-                        <outlet property="Country" destination="zys-A1-gBC" id="u0Z-MK-Oh4"/>
-                        <outlet property="DataNotAvailable" destination="sO7-xP-Fp6" id="8q1-qF-8aA"/>
-                        <outlet property="DocType" destination="C3B-Pj-Art" id="Qme-XL-2St"/>
-                        <outlet property="DocumentInfoNotAvailable" destination="HIV-Pn-1I0" id="2OC-ww-Gil"/>
-                        <outlet property="DocumentInfoView" destination="e2J-1J-b4G" id="qlU-nE-GCy"/>
-                        <outlet property="DocumentNumber" destination="SZT-29-UE1" id="UMQ-op-Sz7"/>
-                        <outlet property="Email" destination="plL-tq-QzX" id="3Cs-PI-fYN"/>
-                        <outlet property="ExpiryDate" destination="zpT-pN-dj8" id="zb7-ww-x3Q"/>
-                        <outlet property="FirstName" destination="90a-Ft-XbR" id="kdI-Wm-Pj0"/>
-                        <outlet property="Gender" destination="Ice-Va-k1q" id="lLt-Cf-AGX"/>
-                        <outlet property="Issuer" destination="udt-xD-nh2" id="BbY-ZL-c9M"/>
+                        <outlet property="KycID" destination="vbB-cd-gBM" id="AO8-2u-QzG"/>
+                        <outlet property="KycReferenceID" destination="HA4-Mu-ECd" id="PvG-hr-3BF"/>
                         <outlet property="KycTitle" destination="NUa-9G-aMn" id="CC3-ke-aWO"/>
-                        <outlet property="LastName" destination="o8q-Tj-flO" id="Mtn-n3-ACc"/>
-                        <outlet property="MiddleName" destination="UF4-36-5Z4" id="OmP-zH-Hh9"/>
-                        <outlet property="MobileNumber" destination="LjD-V7-5iG" id="Dva-v2-IF4"/>
-                        <outlet property="Nationality" destination="ONL-qN-lXh" id="Lpn-4v-iPL"/>
-                        <outlet property="PersonalNumber" destination="JCU-bN-Vnl" id="NIf-tt-gJM"/>
-                        <outlet property="PrimaryName" destination="hlS-dc-vuS" id="U0O-uC-WiJ"/>
-                        <outlet property="SecondaryName" destination="7pM-qU-9w8" id="6sT-lb-Jqz"/>
-                        <outlet property="VerificationStatus" destination="HA4-Mu-ECd" id="D05-HC-ej0"/>
-                        <outlet property="VideoStatus" destination="QRX-kM-Lzw" id="QcC-EF-KkA"/>
-                        <outlet property="VideoStatusDetails" destination="UX3-V0-oqo" id="ghg-7r-hvc"/>
-                        <outlet property="ZipCode" destination="4MG-k5-suL" id="aQT-j3-qjU"/>
-                        <outlet property="scrollView" destination="V4p-O0-HrJ" id="XPL-hC-tOn"/>
+                        <outlet property="PersonID" destination="45J-q4-C9i" id="qqb-wU-2oQ"/>
+                        <outlet property="ReferenceNumber" destination="UX3-V0-oqo" id="5tE-sO-XCn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeb-Km-aRy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -352,4 +152,12 @@ It can take up to a minute before full data is ready for retrieval.</string>
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -1,63 +1,61 @@
 PODS:
   - Alamofire (5.2.2)
-  - AlamofireImage (4.1.0):
-    - Alamofire (~> 5.1)
   - CountryPickerView (3.1.3)
   - eIDWebRTC.bitcode (60.0.19018)
-  - InAppSettingsKit (3.1.3)
-  - ObjectMapper (3.5.3)
-  - PayWiserOnboardingKYC (1.0.3):
-    - Alamofire (~> 5.2)
-    - CountryPickerView
-    - PhoneNumberKit (~> 3.1)
-    - SwiftyJSON (~> 4.0)
-    - VideoID (= 7.1.3)
-  - PhoneNumberKit (3.2.0):
-    - PhoneNumberKit/PhoneNumberKitCore (= 3.2.0)
-    - PhoneNumberKit/UIKit (= 3.2.0)
-  - PhoneNumberKit/PhoneNumberKitCore (3.2.0)
-  - PhoneNumberKit/UIKit (3.2.0):
+  - InAppSettingsKit (3.1.4)
+  - PayWiserOnboardingKYC (2.0.0):
+    - Alamofire (~> 5.2.2)
+    - CountryPickerView (~> 3.1.3)
+    - PhoneNumberKit (~> 3.3.1)
+    - SwiftyJSON (~> 4.3.0)
+    - VideoID (= 7.1.6)
+  - PhoneNumberKit (3.3.1):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.1)
+    - PhoneNumberKit/UIKit (= 3.3.1)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.1)
+  - PhoneNumberKit/UIKit (3.3.1):
     - PhoneNumberKit/PhoneNumberKitCore
   - SocketRocket (0.5.1)
   - SwiftyJSON (4.3.0)
-  - VideoID (7.1.3):
-    - Alamofire (~> 5.2.1)
-    - AlamofireImage (~> 4.1.0)
+  - VideoID (7.1.6):
     - eIDWebRTC.bitcode (= 60.0.19018)
-    - ObjectMapper (~> 3.5.3)
     - SocketRocket (~> 0.5.1)
 
 DEPENDENCIES:
   - InAppSettingsKit
-  - PayWiserOnboardingKYC
+  - PayWiserOnboardingKYC (from `https://github.com/tjasajan/PayWiserOnboardingKYC.git`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AlamofireImage
     - CountryPickerView
     - eIDWebRTC.bitcode
     - InAppSettingsKit
-    - ObjectMapper
-    - PayWiserOnboardingKYC
     - PhoneNumberKit
     - SocketRocket
     - SwiftyJSON
     - VideoID
 
+EXTERNAL SOURCES:
+  PayWiserOnboardingKYC:
+    :git: https://github.com/tjasajan/PayWiserOnboardingKYC.git
+
+CHECKOUT OPTIONS:
+  PayWiserOnboardingKYC:
+    :commit: 2a8bd53e6e3d78752e469f6e9b7a235c253bf096
+    :git: https://github.com/tjasajan/PayWiserOnboardingKYC.git
+
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   CountryPickerView: 383c09949f7455de9892db7ce3400b10da090150
   eIDWebRTC.bitcode: da4b249181655948c23191e2d69a084c5ad426ab
-  InAppSettingsKit: 665a44fe11d4f06be6ec91516ae8c8b11d658b26
-  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
-  PayWiserOnboardingKYC: d26f80b87b1c3bdd992857003876e7d36e71b39a
-  PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
+  InAppSettingsKit: 01fb9774c74a11fefc521f29cb2338909e1c2b61
+  PayWiserOnboardingKYC: 6b78606865ea3953f5ed74074a2d88d94d41419e
+  PhoneNumberKit: ff153d5e299f6da566cb73c6aa71e354933b2932
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  VideoID: c433083bc88ebff6c60e8fb91b95ff261369ce1e
+  VideoID: 1a3ffde7d640a62ffedbd6f930330ed94117e5e5
 
-PODFILE CHECKSUM: 909c62153a7cacda9c19257ea4387108bc3a6545
+PODFILE CHECKSUM: a314930701282e0e3c59ec38bb8c9583b35c6627
 
 COCOAPODS: 1.9.3

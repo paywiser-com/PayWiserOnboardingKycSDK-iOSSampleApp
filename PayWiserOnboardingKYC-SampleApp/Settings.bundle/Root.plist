@@ -36,60 +36,6 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>KYC Whitelabel Endpoint</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Url</string>
-			<key>Key</key>
-			<string>whitelabel_api_url</string>
-			<key>DefaultValue</key>
-			<string>https://onboarding-kyc-dev.paywiser.eu/Whitelabel</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Username</string>
-			<key>Key</key>
-			<string>whitelabel_api_username</string>
-			<key>DefaultValue</key>
-			<string>ccc</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Password</string>
-			<key>Key</key>
-			<string>whitelabel_api_password</string>
-			<key>DefaultValue</key>
-			<string>ddd</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
 			<string>KYC SDK Endpoint</string>
 		</dict>
 		<dict>
@@ -100,7 +46,7 @@
 			<key>Key</key>
 			<string>sdk_api_url</string>
 			<key>DefaultValue</key>
-			<string>https://onboarding-kyc-dev.paywiser.eu/VideoID</string>
+			<string>https://onboarding-kyc-dev.paywiser.eu/mobile</string>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -116,7 +62,7 @@
 			<key>Key</key>
 			<string>sdk_api_username</string>
 			<key>DefaultValue</key>
-			<string>333</string>
+			<string>111</string>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -132,7 +78,7 @@
 			<key>Key</key>
 			<string>sdk_api_password</string>
 			<key>DefaultValue</key>
-			<string>444</string>
+			<string>222</string>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -163,6 +109,32 @@
 			<array>
 				<string>English</string>
 			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Reference number</string>
+			<key>Key</key>
+			<string>reference_number</string>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>Words</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Create IBAN</string>
+			<key>Key</key>
+			<string>create_iban</string>
+			<key>DefaultValue</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -305,6 +277,22 @@
 			<string>State</string>
 			<key>Key</key>
 			<string>data_state</string>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>Words</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Country code</string>
+			<key>Key</key>
+			<string>data_country_code</string>
 			<key>DefaultValue</key>
 			<string></string>
 			<key>KeyboardType</key>
