@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         registerDefaultsFromSettingsBundle()
+        UINavigationBar.appearance().barTintColor = nil
+        UINavigationBar.appearance().tintColor = nil
+        UINavigationBar.appearance().titleTextAttributes = nil
+        UINavigationBar.appearance().shadowImage = UIImage()
         return true
     }
 

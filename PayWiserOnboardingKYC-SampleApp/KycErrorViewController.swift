@@ -26,7 +26,15 @@ class KycErrorViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Sample App"
+        
+        navigationItem.setHidesBackButton(true, animated: false)
+        
         setKycValues()
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
     }
     
     func setKycValues() {
@@ -43,9 +51,7 @@ class KycErrorViewController : UIViewController {
     @IBAction func onRestartKyc(_ sender: Any) {
         showLoading(vc: self)
         
-        self.willMove(toParent: nil)
-        self.view.removeFromSuperview()
-        self.removeFromParent()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     

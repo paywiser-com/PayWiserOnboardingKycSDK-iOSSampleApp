@@ -67,27 +67,14 @@ public class VerificationResult : VerificationResultProtocol {
         let initStoryboard = UIStoryboard(name: vc, bundle: nil)
         let initVC = initStoryboard.instantiateViewController(withIdentifier: vc)
         
-        let parent = UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController
-        let current = parent?.children[0]
-
-        current?.willMove(toParent: nil)
-        current?.view.removeFromSuperview()
-        current?.removeFromParent()
-        parent?.addChild(initVC)
-        parent?.view.addSubview(initVC.view)
-        initVC.didMove(toParent: parent)
+        let parent = UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController as! UINavigationController
+        let current = parent.children[0]
         
-//        let parent = presentingVC.parent
-//        presentingVC.willMove(toParent: nil)
-//        presentingVC.view.removeFromSuperview()
-//        presentingVC.removeFromParent()
-//        parent?.addChild(initVC)
-//        parent?.view.addSubview(initVC.view)
-//        initVC.didMove(toParent: parent)
-        
+        current.navigationController?.pushViewController(initVC, animated: true)
         
     }
     
     
 }
+
 

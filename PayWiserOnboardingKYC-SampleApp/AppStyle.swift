@@ -14,9 +14,6 @@ class AppStyle {
     
     static func setCustomStyle() {
         
-        PayWiserOnboardingKYC.Style.Colors.statusBarColor = .systemBlue
-        PayWiserOnboardingKYC.Style.Colors.navbarColor = .systemBlue
-        
         PayWiserOnboardingKYC.Style.Colors.backgroundColor = .white
         PayWiserOnboardingKYC.Style.Colors.secondaryBackgroundColor = .white
         PayWiserOnboardingKYC.Style.Colors.tertiaryBackgroundColor = .white
@@ -26,30 +23,29 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Colors.secondaryColor = .systemIndigo
         PayWiserOnboardingKYC.Style.Colors.tertiaryColor = .lightGray
         
-        PayWiserOnboardingKYC.Style.Colors.navbarTextColor = .white
-        PayWiserOnboardingKYC.Style.Colors.navbarButtonColor = .white
         PayWiserOnboardingKYC.Style.Colors.titleTextColor = UIColor.systemBlue.withAlphaComponent(0.8)
         PayWiserOnboardingKYC.Style.Colors.textColor = .darkGray
         
-        //PayWiserOnboardingKYC.Style.Texts.navbarTitle = "KYC Sample App"
-        
-        PayWiserOnboardingKYC.Style.Fonts.navbarTitle = UIFont.systemFont(ofSize: 17, weight: .semibold)
         PayWiserOnboardingKYC.Style.Fonts.titleText = UIFont.systemFont(ofSize: 20, weight: .medium)
         PayWiserOnboardingKYC.Style.Fonts.text = UIFont.systemFont(ofSize: 13, weight: .regular)
         
-        PayWiserOnboardingKYC.Style.Shapes.inputField = .Line
-        PayWiserOnboardingKYC.Style.Shapes.cornerRadius = 15
         PayWiserOnboardingKYC.Style.Shapes.showSeparators = false
+        PayWiserOnboardingKYC.Style.Shapes.inputField = .Line
+        PayWiserOnboardingKYC.Style.Shapes.borderWidth = 1
+        PayWiserOnboardingKYC.Style.Shapes.cornerRadius = 15
         
-        PayWiserOnboardingKYC.Style.MainButton.width = 250
-        PayWiserOnboardingKYC.Style.MainButton.style = .Outlined
+        PayWiserOnboardingKYC.Style.Buttons.mainWidth = 250
+        PayWiserOnboardingKYC.Style.Buttons.mainStyle = .Outlined
+        PayWiserOnboardingKYC.Style.Buttons.documentTypeWidth = 250
+        PayWiserOnboardingKYC.Style.Buttons.documentTypeStyle = .Outlined
         
+        PayWiserOnboardingKYC.Style.Texts.navbarTitle = "Sample App"
+        
+        PayWiserOnboardingKYC.Style.Layout.contentTopMargin = 10
+        PayWiserOnboardingKYC.Style.Layout.contentLeadingTrailingMargins = 20
     }
     
     static func setDefaultStyle() {
-        
-        PayWiserOnboardingKYC.Style.Colors.statusBarColor = .systemBackground
-        PayWiserOnboardingKYC.Style.Colors.navbarColor = .systemBackground
         
         PayWiserOnboardingKYC.Style.Colors.backgroundColor = .systemGroupedBackground
         PayWiserOnboardingKYC.Style.Colors.secondaryBackgroundColor = .secondarySystemGroupedBackground
@@ -62,26 +58,28 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Colors.borderColor = .lightGray
         PayWiserOnboardingKYC.Style.Colors.warningColor = .systemRed
         
-        PayWiserOnboardingKYC.Style.Colors.navbarTextColor = .label
-        PayWiserOnboardingKYC.Style.Colors.navbarButtonColor = .systemBlue
         PayWiserOnboardingKYC.Style.Colors.titleTextColor = .label
         PayWiserOnboardingKYC.Style.Colors.textColor = .secondaryLabel
         PayWiserOnboardingKYC.Style.Colors.buttonTextColor = .white
         PayWiserOnboardingKYC.Style.Colors.separatorColor = .separator
         
-        //PayWiserOnboardingKYC.Style.Texts.navbarTitle = "PaywiserOnboardingKYC"
-        
-        PayWiserOnboardingKYC.Style.Fonts.navbarTitle = UIFont.systemFont(ofSize: 17, weight: .medium)
         PayWiserOnboardingKYC.Style.Fonts.titleText = UIFont.systemFont(ofSize: 17, weight: .regular)
         PayWiserOnboardingKYC.Style.Fonts.text = UIFont.systemFont(ofSize: 12, weight: .regular)
         
-        PayWiserOnboardingKYC.Style.Shapes.inputField = .Rectangle
-        PayWiserOnboardingKYC.Style.Shapes.navbarHeight = 44
-        PayWiserOnboardingKYC.Style.Shapes.cornerRadius = 5
         PayWiserOnboardingKYC.Style.Shapes.showSeparators = true
+        PayWiserOnboardingKYC.Style.Shapes.inputField = .Rectangle
+        PayWiserOnboardingKYC.Style.Shapes.borderWidth = 0.5
+        PayWiserOnboardingKYC.Style.Shapes.cornerRadius = 5
         
-        PayWiserOnboardingKYC.Style.MainButton.width = 0
-        PayWiserOnboardingKYC.Style.MainButton.style = .Default
+        PayWiserOnboardingKYC.Style.Buttons.mainWidth = 0
+        PayWiserOnboardingKYC.Style.Buttons.mainStyle = .Default
+        PayWiserOnboardingKYC.Style.Buttons.documentTypeWidth = 0
+        PayWiserOnboardingKYC.Style.Buttons.documentTypeStyle = .Default
+        
+        PayWiserOnboardingKYC.Style.Texts.navbarTitle = "PaywiserOnboardingKYC"
+        
+        PayWiserOnboardingKYC.Style.Layout.contentTopMargin = 30
+        PayWiserOnboardingKYC.Style.Layout.contentLeadingTrailingMargins = 40
         
     }
     

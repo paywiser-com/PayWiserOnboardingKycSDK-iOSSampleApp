@@ -1,48 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Loading View Controller-->
         <scene sceneID="nx3-uQ-wBF">
             <objects>
-                <viewController storyboardIdentifier="LoadingViewController" id="VGS-GO-jf3" customClass="LoadingViewController" customModule="KYCSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadingViewController" id="VGS-GO-jf3" customClass="LoadingViewController" customModule="KYCTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="giv-Eb-fhb" customClass="KycView" customModule="PayWiserOnboardingKYC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KYC Sample App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-hB-Jsy" customClass="KycNavbar" customModule="PayWiserOnboardingKYC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="7dN-v4-Ffo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-1i-lBq" customClass="KycStatusBar" customModule="PayWiserOnboardingKYC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="l6t-79-AzI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="B6N-1i-lBq" secondAttribute="trailing" id="HgH-42-Blc"/>
-                            <constraint firstItem="b2h-hB-Jsy" firstAttribute="trailing" secondItem="l6t-79-AzI" secondAttribute="trailing" id="U83-h4-S9r"/>
-                            <constraint firstItem="b2h-hB-Jsy" firstAttribute="top" secondItem="l6t-79-AzI" secondAttribute="top" id="VZq-OL-Lpd"/>
-                            <constraint firstItem="B6N-1i-lBq" firstAttribute="leading" secondItem="giv-Eb-fhb" secondAttribute="leading" id="ak5-1s-Cnp"/>
-                            <constraint firstItem="B6N-1i-lBq" firstAttribute="top" secondItem="giv-Eb-fhb" secondAttribute="top" id="j4J-pe-lO1"/>
-                            <constraint firstItem="b2h-hB-Jsy" firstAttribute="leading" secondItem="l6t-79-AzI" secondAttribute="leading" id="oha-gv-Vdw"/>
-                            <constraint firstItem="l6t-79-AzI" firstAttribute="top" secondItem="B6N-1i-lBq" secondAttribute="bottom" id="uGS-Bs-Kne"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96U-Lr-7KD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -50,9 +24,4 @@
             <point key="canvasLocation" x="132" y="129"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

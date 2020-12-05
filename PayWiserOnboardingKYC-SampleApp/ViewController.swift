@@ -20,7 +20,7 @@ private enum PermissionType : String {
 
 class ViewController: UIViewController, IASKSettingsDelegate {
     
-    var latestSdkVersion = "v2.1.0"
+    var latestSdkVersion = "v2.1.1"
     
     @IBOutlet weak var sdkVersion: KycTextLabel!
     @IBOutlet weak var StartButton: UIButton!
@@ -33,6 +33,8 @@ class ViewController: UIViewController, IASKSettingsDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Sample App"
         
         UserDefaults.standard.addObserver(self, forKeyPath: "kyc_style_preference", options: .new, context: nil)
         
@@ -59,6 +61,10 @@ class ViewController: UIViewController, IASKSettingsDelegate {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return kycStyle == "custom" ? .lightContent : .default
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
     }
     
     
@@ -101,18 +107,15 @@ class ViewController: UIViewController, IASKSettingsDelegate {
             
             if cameraAuthorized && microphoneAuthorized {
                 
-                let initStoryboard = UIStoryboard(name: "LoadingViewController", bundle: nil)
-                let initVC = initStoryboard.instantiateViewController(withIdentifier: "LoadingViewController")
-                
-                self.addChild(initVC)
-                self.view.addSubview(initVC.view)
-                initVC.didMove(toParent: self)
-                
+                let initStoryboard = UIStoryboard(name: String(describing: LoadingViewController.self), bundle: nil)
+                let initVC = initStoryboard.instantiateViewController(withIdentifier: String(describing: LoadingViewController.self))
+                self.navigationController?.pushViewController(initVC, animated: true)
+
                 self.hideLoading(vc: self)
                 
                 let config = KycConfig(credentials: self.credentials!, settings: self.settings!, userData: self.userData)
                 let result = VerificationResult()
-                
+
                 PayWiserOnboardingKyc.startKyc(vc: initVC, config: config, result: result)
             }
         }
@@ -207,5 +210,36 @@ extension ViewController {
             }
         })
         present(alertController, animated: true)
+    }
+}
+
+
+extension UINavigationController {
+    
+    override open var shouldAutorotate: Bool {
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.shouldAutorotate
+            }
+            return super.shouldAutorotate
+        }
+    }
+    
+    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.preferredInterfaceOrientationForPresentation
+            }
+            return super.preferredInterfaceOrientationForPresentation
+        }
+    }
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.supportedInterfaceOrientations
+            }
+            return super.supportedInterfaceOrientations
+        }
     }
 }

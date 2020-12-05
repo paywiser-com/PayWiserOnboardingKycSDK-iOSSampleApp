@@ -18,6 +18,9 @@ class LoadingViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Sample App"
+        navigationItem.setHidesBackButton(true, animated: false)
+        
         activityView = UIActivityIndicatorView()
         if #available(iOS 13, *) {
             activityView.style = .large
@@ -29,6 +32,10 @@ class LoadingViewController : UIViewController {
         self.view.addSubview(activityView)
         activityView.startAnimating()
         
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
     }
     
 
