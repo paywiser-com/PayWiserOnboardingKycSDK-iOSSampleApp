@@ -43,6 +43,8 @@ class AppStyle {
         
         PayWiserOnboardingKYC.Style.Layout.contentTopMargin = 10
         PayWiserOnboardingKYC.Style.Layout.contentLeadingTrailingMargins = 20
+        
+        PayWiserOnboardingKYC.Style.Other.activityIndicatorStyle = IosCompatibility.activityIndicatorStyleCustom
     }
     
     static func setDefaultStyle() {
@@ -81,6 +83,8 @@ class AppStyle {
         PayWiserOnboardingKYC.Style.Layout.contentTopMargin = 30
         PayWiserOnboardingKYC.Style.Layout.contentLeadingTrailingMargins = 40
         
+        PayWiserOnboardingKYC.Style.Other.activityIndicatorStyle = IosCompatibility.activityIndicatorStyleDefault
+        
     }
     
     private static func getDefaultMainColor() -> UIColor {
@@ -97,4 +101,23 @@ class AppStyle {
         }
     }
 
+}
+
+
+enum IosCompatibility {
+    
+    static var activityIndicatorStyleDefault: UIActivityIndicatorView.Style {
+        if #available(iOS 13, *) {
+            return .large
+        } else {
+            return .whiteLarge
+        }
+    }
+    static var activityIndicatorStyleCustom: UIActivityIndicatorView.Style {
+        if #available(iOS 13, *) {
+            return .medium
+        } else {
+            return .whiteLarge
+        }
+    }
 }

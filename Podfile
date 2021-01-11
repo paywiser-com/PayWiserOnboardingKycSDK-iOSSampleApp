@@ -7,7 +7,7 @@ target 'PayWiserOnboardingKYC-SampleApp' do
 
   # Pods for PayWiserOnboardingKYC-SampleApp
 
-  pod 'PayWiserOnboardingKYC', '2.1.1'
+  pod 'PayWiserOnboardingKYC', '2.1.2'
   pod 'InAppSettingsKit'
 
 

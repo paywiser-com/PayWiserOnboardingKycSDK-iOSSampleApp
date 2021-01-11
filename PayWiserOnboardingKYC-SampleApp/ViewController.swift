@@ -20,7 +20,7 @@ private enum PermissionType : String {
 
 class ViewController: UIViewController, IASKSettingsDelegate {
     
-    var latestSdkVersion = "v2.1.1"
+    var latestSdkVersion = "v2.1.2"
     
     @IBOutlet weak var sdkVersion: KycTextLabel!
     @IBOutlet weak var StartButton: UIButton!
@@ -132,9 +132,8 @@ class ViewController: UIViewController, IASKSettingsDelegate {
         let referenceId = UUID().uuidString
         let referenceNumber = UserDefaults.standard.string(forKey: "reference_number") ?? ""
         let language = UserDefaults.standard.string(forKey: "language_preference") ?? ""
-        let createIban = UserDefaults.standard.bool(forKey: "create_iban")
         
-        settings = KycSettings(referenceID: referenceId, referenceNumber: referenceNumber, language: language, createIBAN: createIban)
+        settings = KycSettings(referenceID: referenceId, referenceNumber: referenceNumber, language: language)
         
         let firstName = UserDefaults.standard.string(forKey: "data_first_name") ?? nil
         let middleName = UserDefaults.standard.string(forKey: "data_middle_name") ?? nil
