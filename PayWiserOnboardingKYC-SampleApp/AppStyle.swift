@@ -104,6 +104,131 @@ class AppStyle {
 }
 
 
+class KycButton: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        switch Style.Buttons.mainStyle {
+        case .Default:
+            self.backgroundColor = Style.Colors.mainColor
+            self.tintColor = Style.Colors.buttonTextColor
+        case .Outlined:
+            self.backgroundColor = Style.Colors.buttonTextColor
+            self.tintColor = Style.Colors.mainColor
+            self.layer.borderColor = Style.Colors.mainColor.cgColor
+            self.layer.borderWidth = Style.Shapes.borderWidth
+        case .Inverted:
+            self.backgroundColor = Style.Colors.buttonTextColor
+            self.tintColor = Style.Colors.mainColor
+        }
+        self.layer.cornerRadius = Style.Shapes.cornerRadius
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        if Style.Buttons.mainWidth >= 250, superview != nil {
+            self.leadingConstraintButton?.isActive = false
+            self.trailingConstraintButton?.isActive = false
+            self.centerXAnchor.constraint(equalTo: superview!.centerXAnchor).isActive = true
+            self.widthAnchor.constraint(equalToConstant: Style.Buttons.mainWidth).isActive = true
+            self.setNeedsLayout()
+        }
+        else {
+            if superview != nil {
+                self.leadingConstraintButton?.constant = Style.Layout.contentLeadingTrailingMargins
+                self.trailingConstraintButton?.constant = Style.Layout.contentLeadingTrailingMargins
+            }
+        }
+    }
+}
+class KycButtonInverted: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.clear
+        self.tintColor = Style.Colors.mainColor
+        self.setTitleColor(Style.Colors.tertiaryColor, for: .disabled)
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        if superview != nil {
+            self.leadingConstraintButton?.constant = Style.Layout.contentLeadingTrailingMargins
+        }
+    }
+}
+class KycTitle: UILabel {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.clear
+        self.textColor = Style.Colors.titleTextColor
+        self.font = Style.Fonts.titleText
+    }
+}
+class KycWarningTextLabel: UILabel {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = UIColor.clear
+        self.textColor = Style.Colors.warningColor
+        self.font = Style.Fonts.text
+    }
+}
+class KycTextLabel: UILabel {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = UIColor.clear
+        self.textColor = Style.Colors.textColor
+        self.font = Style.Fonts.text
+    }
+}
+class KycText: UITextView {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = UIColor.clear
+        self.textColor = Style.Colors.textColor
+        self.font = Style.Fonts.text
+    }
+}
+class KycHelperText: UITextView {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = UIColor.clear
+        self.textColor = Style.Colors.tertiaryColor
+    }
+}
+class KycView: UIView {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = Style.Colors.backgroundColor
+    }
+}
+class KycSecondaryView: UIView {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = Style.Colors.secondaryBackgroundColor
+        if Style.Shapes.showSeparators {
+            self.layer.borderWidth = 1
+            self.layer.borderColor = Style.Colors.separatorColor.cgColor
+        }
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        if superview != nil {
+            self.topConstraintView?.constant = Style.Layout.contentTopMargin
+        }
+    }
+}
+class KycContentView: UIView {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = UIColor.clear
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        if superview != nil {
+            self.leadingConstraintView?.constant = Style.Layout.contentLeadingTrailingMargins
+            self.trailingConstraintView?.constant = Style.Layout.contentLeadingTrailingMargins
+        }
+    }
+}
+
+
 enum IosCompatibility {
     
     static var activityIndicatorStyleDefault: UIActivityIndicatorView.Style {
@@ -119,5 +244,97 @@ enum IosCompatibility {
         } else {
             return .whiteLarge
         }
+    }
+}
+
+
+
+extension UIButton {
+    
+    var leadingConstraintButton: NSLayoutConstraint? {
+        get {
+            self.superview?.constraints.first(where: {
+                $0.firstItem as? UIView == self && $0.firstAttribute == .leading && $0.relation == .equal
+            })
+        }
+        set { setNeedsLayout() }
+    }
+    var trailingConstraintButton: NSLayoutConstraint? {
+        get {
+            self.superview?.constraints.first(where: {
+                $0.secondItem as? UIView == self && $0.firstAttribute == .trailing && $0.relation == .equal
+            })
+        }
+        set { setNeedsLayout() }
+    }
+}
+
+extension UIView {
+    
+    var heightConstraint: NSLayoutConstraint? {
+        get {
+            return constraints.first(where: {
+                $0.firstAttribute == .height && $0.relation == .equal
+            })
+        }
+        set { setNeedsLayout() }
+    }
+    var leadingConstraintView: NSLayoutConstraint? {
+        get {
+            self.superview?.constraints.first(where: {
+                $0.firstItem as? UIView == self && $0.firstAttribute == .leading && $0.relation == .equal
+            })
+        }
+        set { setNeedsLayout() }
+    }
+    var trailingConstraintView: NSLayoutConstraint? {
+        get {
+            self.superview?.constraints.first(where: {
+                $0.secondItem as? UIView == self && $0.firstAttribute == .trailing && $0.relation == .equal
+            })
+        }
+        set { setNeedsLayout() }
+    }
+    var topConstraintView: NSLayoutConstraint? {
+        get {
+            self.superview?.constraints.first(where: {
+                $0.firstItem as? UIView == self && $0.firstAttribute == .top && $0.relation == .equal
+            })
+        }
+        set { setNeedsLayout() }
+    }
+}
+
+
+extension UIViewController {
+    
+    func showLoading(vc: UIViewController) {
+        
+        let activityView = UIActivityIndicatorView()
+        activityView.style = Style.Other.activityIndicatorStyle
+        activityView.color = UIColor.label
+        activityView.center = vc.view.center
+        activityView.tag = 0123
+        vc.view.addSubview(activityView)
+        activityView.startAnimating()
+        
+        vc.view.isUserInteractionEnabled = false
+    }
+    
+    func hideLoading(vc: UIViewController) {
+        if let activityView = vc.view.viewWithTag(0123) {
+            activityView.removeFromSuperview()
+        }
+        vc.view.isUserInteractionEnabled = true
+    }
+    
+    func transitionFromRightToLeft() {
+
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        self.navigationController?.view.layer.add(transition, forKey: nil)
     }
 }

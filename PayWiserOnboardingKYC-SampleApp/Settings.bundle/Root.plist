@@ -104,10 +104,16 @@
 			<key>Values</key>
 			<array>
 				<string>en</string>
+				<string>ja</string>
+				<string>zh-cn</string>
+				<string>zh-tw</string>
 			</array>
 			<key>Titles</key>
 			<array>
 				<string>English</string>
+				<string>Japanese</string>
+				<string>Chinese (simplified)</string>
+				<string>Chinese (traditional)</string>
 			</array>
 		</dict>
 		<dict>

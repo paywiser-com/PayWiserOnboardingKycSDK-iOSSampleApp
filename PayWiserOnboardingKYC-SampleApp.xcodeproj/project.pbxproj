@@ -22,6 +22,8 @@
 		3B5AD88C24D1801400481052 /* KycErrorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5AD88624D1801400481052 /* KycErrorViewController.storyboard */; };
 		3B5AD88D24D1801400481052 /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5AD88824D1801400481052 /* LoadingViewController.storyboard */; };
 		3B5AD88E24D1801400481052 /* KycDataViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5AD88A24D1801400481052 /* KycDataViewController.storyboard */; };
+		3BA9602125D5B0D8005B0B83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BA9602325D5B0D8005B0B83 /* Localizable.strings */; };
+		3BA9602925D5B201005B0B83 /* LocalizationCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9602825D5B201005B0B83 /* LocalizationCustom.swift */; };
 		ED05FF34E01CFFC84F28FDB2 /* Pods_PayWiserOnboardingKYC_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB04CA205643A692C1359EF8 /* Pods_PayWiserOnboardingKYC_SampleApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,11 @@
 		3B5AD88724D1801400481052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KycErrorViewController.storyboard; sourceTree = "<group>"; };
 		3B5AD88924D1801400481052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoadingViewController.storyboard; sourceTree = "<group>"; };
 		3B5AD88B24D1801400481052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KycDataViewController.storyboard; sourceTree = "<group>"; };
+		3BA9602225D5B0D8005B0B83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BA9602425D5B0F2005B0B83 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BA9602525D5B0FE005B0B83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3BA9602625D5B109005B0B83 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3BA9602825D5B201005B0B83 /* LocalizationCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationCustom.swift; sourceTree = "<group>"; };
 		AB04CA205643A692C1359EF8 /* Pods_PayWiserOnboardingKYC_SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayWiserOnboardingKYC_SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EA04B6A2FC37368200AA76 /* Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		E037BE0A11EB93636EA4B2D0 /* Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +104,8 @@
 				3B5AD84C24D17C5300481052 /* Assets.xcassets */,
 				3B5AD84E24D17C5300481052 /* LaunchScreen.storyboard */,
 				3B5AD85124D17C5300481052 /* Info.plist */,
+				3BA9602325D5B0D8005B0B83 /* Localizable.strings */,
+				3BA9602825D5B201005B0B83 /* LocalizationCustom.swift */,
 			);
 			path = "PayWiserOnboardingKYC-SampleApp";
 			sourceTree = "<group>";
@@ -162,6 +171,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 3B5AD83724D17C4F00481052;
 			productRefGroup = 3B5AD84124D17C4F00481052 /* Products */;
@@ -183,6 +195,7 @@
 				3B5AD88524D1800800481052 /* Settings.bundle in Resources */,
 				3B5AD88D24D1801400481052 /* LoadingViewController.storyboard in Resources */,
 				3B5AD85024D17C5300481052 /* LaunchScreen.storyboard in Resources */,
+				3BA9602125D5B0D8005B0B83 /* Localizable.strings in Resources */,
 				3B5AD84D24D17C5300481052 /* Assets.xcassets in Resources */,
 				3B5AD84B24D17C4F00481052 /* Main.storyboard in Resources */,
 			);
@@ -243,6 +256,7 @@
 				3B5AD84424D17C4F00481052 /* AppDelegate.swift in Sources */,
 				3B5AD88024D1800800481052 /* AppStyle.swift in Sources */,
 				3B5AD87F24D1800800481052 /* KycDataViewController.swift in Sources */,
+				3BA9602925D5B201005B0B83 /* LocalizationCustom.swift in Sources */,
 				3B5AD88324D1800800481052 /* KycErrorViewController.swift in Sources */,
 				3B5AD84624D17C4F00481052 /* SceneDelegate.swift in Sources */,
 			);
@@ -291,6 +305,17 @@
 			name = KycDataViewController.storyboard;
 			sourceTree = "<group>";
 		};
+		3BA9602325D5B0D8005B0B83 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BA9602225D5B0D8005B0B83 /* en */,
+				3BA9602425D5B0F2005B0B83 /* ja */,
+				3BA9602525D5B0FE005B0B83 /* zh-Hans */,
+				3BA9602625D5B109005B0B83 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -298,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -358,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
