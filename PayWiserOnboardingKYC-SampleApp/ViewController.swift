@@ -20,7 +20,7 @@ private enum PermissionType : String {
 
 class ViewController: UIViewController, IASKSettingsDelegate {
     
-    var latestSdkVersion = "v2.1.2"
+    var latestSdkVersion = "v3.0.1"
     
     @IBOutlet weak var sdkVersion: KycTextLabel!
     @IBOutlet weak var StartButton: UIButton!
