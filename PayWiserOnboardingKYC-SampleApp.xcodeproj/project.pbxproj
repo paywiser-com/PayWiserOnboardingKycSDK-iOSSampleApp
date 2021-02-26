@@ -24,7 +24,7 @@
 		3B5AD88E24D1801400481052 /* KycDataViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5AD88A24D1801400481052 /* KycDataViewController.storyboard */; };
 		3BA9602125D5B0D8005B0B83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BA9602325D5B0D8005B0B83 /* Localizable.strings */; };
 		3BA9602925D5B201005B0B83 /* LocalizationCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9602825D5B201005B0B83 /* LocalizationCustom.swift */; };
-		ED05FF34E01CFFC84F28FDB2 /* Pods_PayWiserOnboardingKYC_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB04CA205643A692C1359EF8 /* Pods_PayWiserOnboardingKYC_SampleApp.framework */; };
+		BEF4212DC1B863B9CB17F15D /* Pods_PayWiserOnboardingKYC_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A853449401919E2C4DD28B1C /* Pods_PayWiserOnboardingKYC_SampleApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +50,9 @@
 		3BA9602525D5B0FE005B0B83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3BA9602625D5B109005B0B83 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3BA9602825D5B201005B0B83 /* LocalizationCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationCustom.swift; sourceTree = "<group>"; };
-		AB04CA205643A692C1359EF8 /* Pods_PayWiserOnboardingKYC_SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayWiserOnboardingKYC_SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8EA04B6A2FC37368200AA76 /* Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		E037BE0A11EB93636EA4B2D0 /* Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5B9B642D0C264EED91EBCFD1 /* Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		A853449401919E2C4DD28B1C /* Pods_PayWiserOnboardingKYC_SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayWiserOnboardingKYC_SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33A9C4AE80F9B9A180BCF4D /* Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED05FF34E01CFFC84F28FDB2 /* Pods_PayWiserOnboardingKYC_SampleApp.framework in Frameworks */,
+				BEF4212DC1B863B9CB17F15D /* Pods_PayWiserOnboardingKYC_SampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 				3B5AD84224D17C4F00481052 /* PayWiserOnboardingKYC-SampleApp */,
 				3B5AD84124D17C4F00481052 /* Products */,
 				D40146CFC6E63CAA6F82A47F /* Pods */,
-				400C725C74E3E47A03A2609F /* Frameworks */,
+				BB956F17E65C834F3894D036 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,10 +110,10 @@
 			path = "PayWiserOnboardingKYC-SampleApp";
 			sourceTree = "<group>";
 		};
-		400C725C74E3E47A03A2609F /* Frameworks */ = {
+		BB956F17E65C834F3894D036 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB04CA205643A692C1359EF8 /* Pods_PayWiserOnboardingKYC_SampleApp.framework */,
+				A853449401919E2C4DD28B1C /* Pods_PayWiserOnboardingKYC_SampleApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,8 +121,8 @@
 		D40146CFC6E63CAA6F82A47F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E037BE0A11EB93636EA4B2D0 /* Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig */,
-				B8EA04B6A2FC37368200AA76 /* Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig */,
+				B33A9C4AE80F9B9A180BCF4D /* Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig */,
+				5B9B642D0C264EED91EBCFD1 /* Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -134,11 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B5AD85424D17C5300481052 /* Build configuration list for PBXNativeTarget "PayWiserOnboardingKYC-SampleApp" */;
 			buildPhases = (
-				921A981035763CB3B327B078 /* [CP] Check Pods Manifest.lock */,
+				BAE7416B1713E5C9D933319D /* [CP] Check Pods Manifest.lock */,
 				3B5AD83C24D17C4F00481052 /* Sources */,
 				3B5AD83D24D17C4F00481052 /* Frameworks */,
 				3B5AD83E24D17C4F00481052 /* Resources */,
-				8050FCDBC38F2363164345B0 /* [CP] Embed Pods Frameworks */,
+				7F4B4CBB77F048E23F0E8373 /* [CP] Embed Pods Frameworks */,
+				9579E914CB49D2533B5D9406 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,7 +205,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8050FCDBC38F2363164345B0 /* [CP] Embed Pods Frameworks */ = {
+		7F4B4CBB77F048E23F0E8373 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,7 +222,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		921A981035763CB3B327B078 /* [CP] Check Pods Manifest.lock */ = {
+		9579E914CB49D2533B5D9406 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PayWiserOnboardingKYC-SampleApp/Pods-PayWiserOnboardingKYC-SampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE7416B1713E5C9D933319D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,11 +455,11 @@
 		};
 		3B5AD85524D17C5300481052 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E037BE0A11EB93636EA4B2D0 /* Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig */;
+			baseConfigurationReference = B33A9C4AE80F9B9A180BCF4D /* Pods-PayWiserOnboardingKYC-SampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = 2R772Q527U;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PayWiserOnboardingKYC-SampleApp/Info.plist";
@@ -449,21 +467,21 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = eu.paywiser.onboarding.kyc.PayWiserOnboardingKYC;
 				PRODUCT_NAME = KYCSampleApp;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3B5AD85624D17C5300481052 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8EA04B6A2FC37368200AA76 /* Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig */;
+			baseConfigurationReference = 5B9B642D0C264EED91EBCFD1 /* Pods-PayWiserOnboardingKYC-SampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = 2R772Q527U;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PayWiserOnboardingKYC-SampleApp/Info.plist";
@@ -471,11 +489,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = eu.paywiser.onboarding.kyc.PayWiserOnboardingKYC;
 				PRODUCT_NAME = KYCSampleApp;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
