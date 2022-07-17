@@ -1,14 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
-target 'PayWiserOnboardingKYC-SampleApp' do
+target 'PayWingsOnboardingKYC-SampleApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for PayWiserOnboardingKYC-SampleApp
+  # Pods for PayWingsOnboardingKYC-SampleApp
 
-  pod 'PayWiserOnboardingKYC', '3.6.0'
-  pod 'IdensicMobileSDK', :http => 'https://github.com/paywiser-com/PayWiserOnboardingKycSDK-iOS-IdensicMobile/archive/v1.0.0.tar.gz'
+  pod 'PayWingsOnboardingKYC', '4.0.0'
+  pod 'IdensicMobileSDK', :http => 'https://github.com/paywings/PayWingsOnboardingKycSDK-iOS-IdensicMobile/archive/v2.0.0.tar.gz'
   pod 'InAppSettingsKit', '3.3'
 
 
